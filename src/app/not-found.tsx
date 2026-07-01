@@ -22,7 +22,7 @@ export default function NotFound() {
     {
       href: "/about",
       label: "About Conference",
-      description: "Learn about IC-AISIS 2026",
+      description: "Learn about IC-AISIS 2027",
       icon: <FileText className="w-5 h-5" />,
     },
     {
@@ -176,7 +176,7 @@ export default function NotFound() {
               Still can&apos;t find what you need?
             </h3>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              If you were looking for specific information about IC-AISIS 2026,
+              If you were looking for specific information about IC-AISIS 2027,
               try checking our main sections or contact us directly for
               assistance.
             </p>

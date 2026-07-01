@@ -48,7 +48,7 @@ export default function Home() {
                   </div>
 
                   <h1 className="text-4xl lg:text-6xl font-display font-bold mb-6 leading-tight">
-                    International Conference on{" "}
+                    2nd International Conference on{" "}
                     <span className="bg-gradient-to-r from-blue-200 to-white bg-clip-text text-transparent">
                       Artificial Intelligence
                     </span>{" "}

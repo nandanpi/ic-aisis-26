@@ -162,7 +162,7 @@ const PageLoader = ({ onComplete }: PageLoaderProps) => {
               className="text-center max-w-2xl"
             >
               <h2 className="text-xl md:text-2xl font-display font-semibold text-white mb-2">
-                International Conference on
+                {is2026 ? "International Conference on" : "2nd International Conference on"}
               </h2>
               <h3 className="text-lg md:text-xl text-blue-200 font-medium mb-4">
                 Artificial Intelligence for Sustainability and Intelligent

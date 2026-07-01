@@ -14,6 +14,15 @@ import { usePathname } from "next/navigation";
 const Footer = () => {
   const pathname = usePathname() || "";
   const is2026 = pathname.includes("/2026");
+
+  const getLinkHref = (href: string) => {
+    if (href === "/") {
+      return is2026 ? "/2026" : "/2027";
+    }
+    const prefix = is2026 ? "/2026" : "/2027";
+    return `${prefix}${href}`;
+  };
+
   const quickLinks = [
     { href: "/about", label: "About Conference" },
     { href: "/topics", label: "Research Topics" },
@@ -67,13 +76,13 @@ const Footer = () => {
                   IC-AISIS {is2026 ? "2026" : "2027"}
                 </h3>
                 <p className="text-blue-300 font-medium">
-                  International Conference
+                  {is2026 ? "International Conference" : "2nd International Conference"}
                 </p>
               </div>
             </div>
 
             <p className="text-gray-300 leading-relaxed mb-6 text-lg">
-              International Conference on Artificial Intelligence for
+              {is2026 ? "International Conference" : "2nd International Conference"} on Artificial Intelligence for
               Sustainability and Intelligent Systems
             </p>
 
@@ -116,7 +125,7 @@ const Footer = () => {
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <Link
-                    href={link.href}
+                    href={getLinkHref(link.href)}
                     className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center group"
                   >
                     <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
@@ -137,7 +146,7 @@ const Footer = () => {
               {authorResources.map((link) => (
                 <li key={link.href}>
                   <Link
-                    href={link.href}
+                    href={getLinkHref(link.href)}
                     className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center group"
                   >
                     <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />

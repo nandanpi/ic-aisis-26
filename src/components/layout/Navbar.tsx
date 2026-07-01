@@ -118,32 +118,40 @@ const Navbar = () => {
     { href: "/contact", label: "Contact" },
   ];
 
+  const getLinkHref = (href: string) => {
+    if (href === "/") {
+      return is2026 ? "/2026" : "/2027";
+    }
+    const prefix = is2026 ? "/2026" : "/2027";
+    return `${prefix}${href}`;
+  };
+
   const isAboutTabActive = (tabId?: string) => {
-    if (pathname !== "/about") return false;
+    if (!pathname.endsWith("/about")) return false;
     const currentTab = searchParams.get("tab") || "scope";
     return tabId ? currentTab === tabId : false;
   };
 
   const isCommitteesTabActive = (tabId?: string) => {
-    if (pathname !== "/committees") return false;
+    if (!pathname.endsWith("/committee")) return false;
     const currentTab = searchParams.get("tab") || "leadership";
     return currentTab === tabId;
   };
 
   const isAnyAboutTabActive = () => {
-    return pathname === "/about";
+    return pathname.endsWith("/about");
   };
 
   const isAnyCommitteesTabActive = () => {
-    return pathname === "/committees";
+    return pathname.endsWith("/committee");
   };
 
   const isPageActive = (href: string) => {
-    return pathname === href;
+    return pathname === getLinkHref(href);
   };
 
   const isCallForPapersActive = (dropdown: NavLinkItem[]) => {
-    return dropdown.some((item) => pathname === item.href);
+    return dropdown.some((item) => pathname === getLinkHref(item.href));
   };
 
   const handleDownload = (url: string) => {
@@ -163,7 +171,7 @@ const Navbar = () => {
         }`}
     >
       <div className="flex justify-between items-center p-4">
-        <Link href="/" className="flex items-center md:gap-2 gap-1">
+        <Link href={getLinkHref("/")} className="flex items-center md:gap-2 gap-1">
           <Image
             src={is2026 ? "/2026/nitteLogo.png" : "/2027/nitteLogo.png"}
             alt="Nitte Logo"
@@ -209,7 +217,7 @@ const Navbar = () => {
                     link.dropdown?.map((item) => (
                       <Link
                         key={item.href}
-                        href={item.href}
+                        href={getLinkHref(item.href)}
                         className={`block px-4 py-3 text-sm transition-colors ${link.label === "About"
                           ? isAboutTabActive(item.tabId)
                             ? "text-blue-600 bg-blue-50"
@@ -239,7 +247,7 @@ const Navbar = () => {
             ) : (
               <Link
                 key={"href" in link && link.href ? link.href : index.toString()}
-                href={"href" in link && link.href ? link.href : "#"}
+                href={"href" in link && link.href ? getLinkHref(link.href) : "#"}
                 className={`py-2 px-3 rounded-lg font-medium transition-all duration-200 ${"href" in link && link.href && isPageActive(link.href)
                   ? "text-blue-600 bg-blue-50"
                   : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
@@ -293,7 +301,7 @@ const Navbar = () => {
                       {link.dropdown?.map((item) => (
                         <Link
                           key={item.href}
-                          href={item.href}
+                          href={getLinkHref(item.href)}
                           className={`block py-2 px-4 text-sm rounded-lg transition-colors ${link.label === "About"
                             ? isAboutTabActive(item.tabId)
                               ? "text-blue-600 bg-blue-50"
@@ -328,7 +336,7 @@ const Navbar = () => {
               ) : (
                 <Link
                   key={"href" in link && link.href ? link.href : index.toString()}
-                  href={"href" in link && link.href ? link.href : "#"}
+                  href={"href" in link && link.href ? getLinkHref(link.href) : "#"}
                   className={`block py-3 px-4 font-medium rounded-lg transition-colors ${"href" in link && link.href && isPageActive(link.href)
                     ? "text-blue-600 bg-blue-50"
                     : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"

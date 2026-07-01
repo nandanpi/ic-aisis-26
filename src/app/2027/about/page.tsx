@@ -84,7 +84,7 @@ const AboutContent = () => {
 
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
               Discover the vision, objectives, and organizing institutions
-              behind the International Conference on Artificial Intelligence for
+              behind the 2nd International Conference on Artificial Intelligence for
               Sustainability and Intelligent Systems.
             </p>
           </div>
@@ -109,7 +109,7 @@ const AboutContent = () => {
                           Scope of the Conference
                         </h2>
                         <p className="text-gray-700 leading-relaxed mb-4">
-                          The International Conference on Artificial
+                          The 2nd International Conference on Artificial
                           Intelligence for Sustainability and Intelligent
                           Systems (IC-AISIS&apos;27) aims to provide a global
                           interdisciplinary platform for the presentation and
@@ -232,7 +232,7 @@ const AboutContent = () => {
                       Objectives of IC-AISIS&apos;27
                     </h2>
                     <p className="text-gray-700 leading-relaxed">
-                      The International Conference on Artificial Intelligence
+                      The 2nd International Conference on Artificial Intelligence
                       for Sustainability and Intelligent Systems
                       (IC-AISIS&apos;27) is designed to fulfill the following
                       core objectives:

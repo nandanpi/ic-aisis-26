@@ -1,6 +1,7 @@
 const patron = {
   name: "Sri N. Vinaya Hegde",
-  title: "Founder Chancellor",
+  title:
+    "Chancellor, Nitte (Deemed to be University) & President, Nitte Education Trust, Mangaluru",
   image:
     "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665153/vinayaHegde_Large_p5i0ih.jpg",
 };
@@ -13,9 +14,9 @@ const steeringCommittee = [
   },
   {
     name: "Sri Vishal Hegde",
-    title:
-      "Chancellor, Nitte (Deemed to be University) & President, Nitte Education Trust, Mangaluru",
-    image: "https://nitte.edu.in/img/leadership/vishal-hegde.jpg",
+    title: "Pro-Chancellor (Admin)",
+    image:
+      "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665153/vishalHegde_Large_ulall0.jpg",
   },
   {
     name: "Prof. (Dr.) M. S. Moodithaya",
@@ -51,6 +52,12 @@ const steeringCommittee = [
 
 const generalChairs = [
   {
+    name: "Dr. Vijeesh V",
+    title: "Associate Director (R&D), Nitte Off-Campus Centre",
+    image:
+      "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665153/vijeesh_Large_yfwxij.jpg",
+  },
+  {
     name: "Dr. Shashank Shetty",
     title: "Associate Professor, Department of CSE, NMAMIT, Nitte",
     image:
@@ -82,7 +89,17 @@ const executiveCommittee = [
     title: "Vice Principal",
     image: "https://nitte.edu.in/admin/photo/3/faculty/6/2231.jpg",
   },
-
+  {
+    name: "Dr. I. Ramesh Mithanthaya",
+    title: "Dean (Academics) / Professor, Department of Civil Engineering",
+    image: "https://nitte.edu.in/admin/photo/3/faculty/4/22.jpg",
+  },
+  {
+    name: "Dr. Shrinivasa Rao B.R.",
+    title:
+      "Controller of Examinations / Professor, Department of Mechanical Engineering",
+    image: "https://nitte.edu.in/admin/photo/3/faculty/9/252.jpg",
+  },
   {
     name: "Sri. Yogeesh Hegde",
     title: "Director (CM & D)",
@@ -90,10 +107,9 @@ const executiveCommittee = [
       "https://res.cloudinary.com/dqtyllykk/image/upload/v1748664762/WhatsApp_Image_2025-05-31_at_08.56.17_urztfe.jpg",
   },
   {
-    name: "Dr. Vijeesh V",
-    title: "Associate Director R&D, Nitte Off Campus Centre",
-    image:
-      "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665153/vijeesh_Large_yfwxij.jpg",
+    name: "Dr. Sudesh Bekal",
+    title: "Professor & Dean, Research & Development",
+    image: "https://nitte.edu.in/admin/photo/3/faculty/9/254.jpg",
   },
   {
     name: "Dr. Rekha Bhandarkar",
@@ -109,7 +125,7 @@ const executiveCommittee = [
   {
     name: "Dr. Subrahmanya Bhat K",
     title:
-      "Professor & CoE of Nitte off Campus Centre, Nitte (Deemed to be University)",
+      "Professor & CoE of Nitte off Campus Centre,Nitte(Deemed to be University)",
     image: "https://nitte.edu.in/admin/photo/3/faculty/9/253.jpg",
   },
   {
@@ -123,25 +139,25 @@ const executiveCommittee = [
     image: "https://nitte.edu.in/admin/photo/3/faculty/9/256.jpg",
   },
   {
-    name: "Dr. Venugopal P S",
+    name: "Dr. Venugopala P S",
     title: "HoD, Dept. of Artificial Intelligence & Data Science Engineering",
     image: "https://nitte.edu.in/admin/photo/3/faculty/176/2658.jpg",
   },
   {
-    name: "Dr. Sharada Uday Shenoy",
+    name: "Dr. Sharada U Shenoy",
     title:
       "HoD, Dept. of Artificial Intelligence & Machine Learning Engineering",
     image: "https://nitte.edu.in/admin/photo/3/faculty/166/2196.jpg",
   },
   {
-    name: "Dr. Vidya S M",
+    name: "Dr. Ujwal P",
     title: "HoD, Dept. of Biotechnology Engineering",
-    image: "https://nitte.edu.in/admin/photo/3/faculty/3/5.jpg",
+    image: "https://nitte.edu.in/admin/photo/3/faculty/3/4.jpg",
   },
   {
-    name: "Dr. Bhojaraja B E",
+    name: "Dr. Arun Kumar Bhat",
     title: "HoD, Dept. of Civil Engineering",
-    image: "https://nitte.edu.in/admin/photo/3/faculty/4/31.jpg",
+    image: "https://nitte.edu.in/admin/photo/3/faculty/4/24.jpg",
   },
   {
     name: "Dr. Radhakrishna",
@@ -149,9 +165,9 @@ const executiveCommittee = [
     image: "https://nitte.edu.in/admin/photo/3/faculty/167/3024.jpg",
   },
   {
-    name: "Dr. Raju K",
+    name: "Dr. Jyothi Shetty",
     title: "HoD, Dept. of Computer Science Engineering",
-    image: "https://nitte.edu.in/admin/photo/3/faculty/5/62.jpg",
+    image: "https://nitte.edu.in/admin/photo/3/faculty/5/56.jpg",
   },
   {
     name: "Dr. Roshan Fernandes",
@@ -159,24 +175,14 @@ const executiveCommittee = [
     image: "https://nitte.edu.in/admin/photo/3/faculty/179/2842.jpg",
   },
   {
-    name: "Dr. Rajalaxmi Samaga B L",
+    name: "Dr. Suryanarayana K",
     title: "HoD, Dept. of Electrical & Electronics Engineering",
-    image: "https://nitte.edu.in/admin/photo/3/faculty/6/2287.jpg",
+    image: "https://nitte.edu.in/admin/photo/3/faculty/6/99.jpg",
   },
   {
-    name: "Dr. Veena Devi Shastrimath V.",
+    name: "Dr. K V S S S S Sairam",
     title: "HoD, Dept. of Electronics & Communication Engineering",
-    image: "https://nitte.edu.in/admin/photo/3/faculty/7/120.jpg",
-  },
-  {
-    name: "Dr. Sushma P S",
-    title: "HoD, Electronics Engineering (VLSI Design & Technology)",
-    image: "https://nitte.edu.in/admin/photo/3/faculty/196/3132.jpg",
-  },
-  {
-    name: "Dr. Durga Prasad",
-    title: "HoD, Electronics & Communication (Advanced Communication Technology)",
-    image: "https://nitte.edu.in/admin/photo/3/faculty/197/3133.jpg",
+    image: "https://nitte.edu.in/admin/photo/3/faculty/7/119.jpg",
   },
   {
     name: "Dr. Ashwini B",
