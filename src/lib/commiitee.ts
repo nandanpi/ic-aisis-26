@@ -64,7 +64,7 @@ const generalChairs = [
   },
   {
     name: "Dr. N S S RAMAKRISHNA",
-    title: "Assistant Professor Gd-III, Department of EEE, NMAMIT, Nitte",
+    title: "Associate Professor, Department of EEE, NMAMIT, Nitte",
     image:
       "https://nitte.edu.in/admin/photo/3/faculty/6/2811.jpg",
   },
@@ -339,11 +339,11 @@ const technicalCommittee = [
 
 const studentOrganizers = [
   {
-    name: "Nandan R Pai",
-    title: "Department of AI & ML",
+    name: "Mr. Paripoorna B",
+    title: "Department of Computer Science",
     position: "Student Chair",
     image:
-      "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665330/nandan_zsy1o4.jpg",
+      "https://res.cloudinary.com/dstpdenfa/image/upload/v1764619910/profile_pictures/profile_158_1764619910.jpg",
   },
   {
     name: "Abhijna N",

@@ -27,7 +27,7 @@ export default function Contact() {
     {
       name: "Dr. N S S RAMAKRISHNA",
       title: "General Chair",
-      department: "Assistant Professor Gd-III, Dept. of EEE",
+      department: "Associate Professor, Dept. of EEE",
       institution: "NMAM Institute of Technology, Nitte",
       email: "ramakrishna.n@nitte.edu.in",
       image:
@@ -37,13 +37,13 @@ export default function Contact() {
 
   const studentChairs = [
     {
-      name: "Mr. Nandan R Pai",
+      name: "Mr. Paripoorna B",
       title: "Student Chair",
-      department: "Department of Artificial Intelligence & Machine Learning",
+      department: "Department of Computer Science",
       institution: "NMAM Institute of Technology, Nitte",
-      email: "nnm22am033@nmamit.in",
+      email: "nnm23cs124@nmamit.in",
       image:
-        "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665330/nandan_zsy1o4.jpg",
+        "https://res.cloudinary.com/dstpdenfa/image/upload/v1764619910/profile_pictures/profile_158_1764619910.jpg",
     },
   ];
 
