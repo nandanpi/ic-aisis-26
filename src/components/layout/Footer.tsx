@@ -5,13 +5,15 @@ import {
   Mail,
   MapPin,
   Calendar,
-  Phone,
   ExternalLink,
   ArrowRight,
 } from "lucide-react";
 import UthmAssociation from "@/components/UthmAssociation";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const pathname = usePathname() || "";
+  const is2026 = pathname.includes("/2026");
   const quickLinks = [
     { href: "/about", label: "About Conference" },
     { href: "/topics", label: "Research Topics" },
@@ -62,7 +64,7 @@ const Footer = () => {
             <div className="flex flex-col items-start space-x-4 mb-6">
               <div>
                 <h3 className="text-2xl font-display font-bold">
-                  IC-AISIS 2026
+                  IC-AISIS {is2026 ? "2026" : "2027"}
                 </h3>
                 <p className="text-blue-300 font-medium">
                   International Conference
@@ -81,10 +83,14 @@ const Footer = () => {
                   <Calendar className="w-5 h-5 text-blue-400" />
                 </div>
                 <div>
-                  <p className="font-semibold text-white">January 24, 2026</p>
-                  <p className="text-sm text-gray-400">
-                    Hybrid Mode Conference (Virtual Mode is Only for the participants Outsite Karnataka)
+                  <p className="font-semibold text-white">
+                    {is2026 ? "January 24, 2026" : "Coming Soon"}
                   </p>
+                  {is2026 && (
+                    <p className="text-sm text-gray-400">
+                      Hybrid Mode Conference (Virtual Mode is Only for the participants Outsite Karnataka)
+                    </p>
+                  )}
                 </div>
               </div>
 
@@ -149,40 +155,47 @@ const Footer = () => {
               Important Dates
             </h4>
             <div className="space-y-4 mb-8">
-              {importantDates.map((item, index) => (
-                <div
-                  key={index}
-                  className={`flex flex-col p-3 rounded-lg border ${item.isHardDeadline
-                    ? "bg-red-900/30 border-red-700/50"
-                    : "bg-gray-800/50 border-gray-700/50"
-                    }`}
-                >
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="text-gray-300 text-sm">{item.event}</span>
-                    {item.isHardDeadline && (
-                      <span className="bg-red-600 text-white px-2 py-0.5 rounded-full text-xs font-bold">
-                        Hard Deadline
-                      </span>
-                    )}
-                  </div>
-                  {item.oldDates && item.oldDates.length > 0 && (
-                    <div className="flex flex-wrap gap-1 mb-1">
-                      {item.oldDates.map((oldDate, idx) => (
-                        <span
-                          key={idx}
-                          className="text-gray-500 text-xs line-through opacity-60"
-                        >
-                          {oldDate}
+              {is2026 ? (
+                importantDates.map((item, index) => (
+                  <div
+                    key={index}
+                    className={`flex flex-col p-3 rounded-lg border ${item.isHardDeadline
+                      ? "bg-red-900/30 border-red-700/50"
+                      : "bg-gray-800/50 border-gray-700/50"
+                      }`}
+                  >
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-gray-300 text-sm">{item.event}</span>
+                      {item.isHardDeadline && (
+                        <span className="bg-red-600 text-white px-2 py-0.5 rounded-full text-xs font-bold">
+                          Hard Deadline
                         </span>
-                      ))}
+                      )}
                     </div>
-                  )}
-                  <span className={`font-semibold text-sm ${item.isHardDeadline ? "text-red-400" : "text-blue-400"
-                    }`}>
-                    {item.date}
-                  </span>
+                    {item.oldDates && item.oldDates.length > 0 && (
+                      <div className="flex flex-wrap gap-1 mb-1">
+                        {item.oldDates.map((oldDate, idx) => (
+                          <span
+                            key={idx}
+                            className="text-gray-500 text-xs line-through opacity-60"
+                          >
+                            {oldDate}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                    <span className={`font-semibold text-sm ${item.isHardDeadline ? "text-red-400" : "text-blue-400"
+                      }`}>
+                      {item.date}
+                    </span>
+                  </div>
+                ))
+              ) : (
+                <div className="bg-gray-800/50 border border-gray-700/50 p-4 rounded-lg text-center">
+                  <p className="text-blue-400 font-semibold text-sm">Important Dates</p>
+                  <p className="text-gray-300 text-xs mt-1 font-medium">Coming Soon</p>
                 </div>
-              ))}
+              )}
             </div>
 
             <div className="space-y-4">
@@ -206,20 +219,6 @@ const Footer = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start">
-                  <Phone className="w-5 h-5 mr-3 mt-0.5 text-blue-400 flex-shrink-0" />
-                  <div>
-                    <p className="text-gray-300 text-sm mb-1">
-                      Conference Support
-                    </p>
-                    <a
-                      href="tel:+919481585863"
-                      className="text-blue-400 hover:text-blue-300 transition-colors duration-200 font-medium"
-                    >
-                      +91 94815 85863
-                    </a>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -232,7 +231,7 @@ const Footer = () => {
 
       <div className="border-t border-gray-800 flex sm:flex-row flex-col py-4 w-full gap-4 justify-center items-center">
         <p className="text-gray-400 text-sm">
-          © 2026 IC-AISIS. All rights reserved.
+          © {is2026 ? "2026" : "2027"} IC-AISIS. All rights reserved.
         </p>
         <div className="flex items-center space-x-1 text-gray-400 text-sm">
           <span>Organized by</span>

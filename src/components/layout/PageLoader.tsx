@@ -3,12 +3,15 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLoaderStore } from "@/lib/store";
+import { usePathname } from "next/navigation";
 
 interface PageLoaderProps {
   onComplete?: () => void;
 }
 
 const PageLoader = ({ onComplete }: PageLoaderProps) => {
+  const pathname = usePathname() || "";
+  const is2026 = pathname.includes("/2026");
   const [isLoading, setIsLoading] = useState(false);
   const { shouldShowLoader, markHomeAsVisited } = useLoaderStore();
 
@@ -143,7 +146,7 @@ const PageLoader = ({ onComplete }: PageLoaderProps) => {
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.6, duration: 0.6 }}
                 >
-                  2026
+                  {is2026 ? "2026" : "2027"}
                 </motion.p>
               </div>
             </motion.div>
@@ -167,7 +170,7 @@ const PageLoader = ({ onComplete }: PageLoaderProps) => {
               </h3>
               <div className="flex items-center justify-center space-x-2 text-blue-100">
                 <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                <span className="text-sm">January 24, 2026</span>
+                <span className="text-sm">{is2026 ? "January 24, 2026" : "Coming Soon"}</span>
                 <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
                 <span className="text-sm">NMAMIT, Nitte</span>
                 <span className="w-2 h-2 bg-blue-400 rounded-full"></span>

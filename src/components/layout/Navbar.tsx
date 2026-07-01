@@ -12,6 +12,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const is2026 = pathname.includes("/2026");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -99,10 +100,12 @@ const Navbar = () => {
       ],
     },
     { href: "/topics", label: "Topics" },
-    {
-      downloadUrl: "https://docs.google.com/document/d/1lV8SbSj5a6jP94OIQOtXA3eA0yMFt3bKzyRD9aav68o/export?format=pdf",
-      label: "Presentation Schedule"
-    },
+    is2026
+      ? {
+        downloadUrl: "https://docs.google.com/document/d/1lV8SbSj5a6jP94OIQOtXA3eA0yMFt3bKzyRD9aav68o/export?format=pdf",
+        label: "Presentation Schedule",
+      }
+      : { href: "/presentation-schedule", label: "Presentation Schedule" },
     { href: "/schedule", label: "Schedule" },
     {
       label: "Call for Papers",
@@ -162,14 +165,14 @@ const Navbar = () => {
       <div className="flex justify-between items-center p-4">
         <Link href="/" className="flex items-center md:gap-2 gap-1">
           <Image
-            src="/nitteLogo.png"
+            src={is2026 ? "/2026/nitteLogo.png" : "/2027/nitteLogo.png"}
             alt="Nitte Logo"
             width={200}
             height={100}
             className="md:w-56 w-40 h-6 md:h-8"
           />
           <div className="flex items-center border-l-2 md:ml-2 md:pl-4 ml-1 pl-2">
-            <Image src="/logo.png" alt="Logo" width={100} height={100} />
+            <Image src={is2026 ? "/2026/logo.png" : "/2027/logo.jpg"} alt="Logo" width={100} height={100} />
           </div>
         </Link>
 

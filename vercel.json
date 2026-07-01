@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    { "source": "/", "destination": "/2027", "permanent": false },
+    { "source": "/about", "destination": "/2027/about", "permanent": false },
+    { "source": "/committee", "destination": "/2027/committee", "permanent": false },
+    { "source": "/contact", "destination": "/2027/contact", "permanent": false },
+    { "source": "/fee", "destination": "/2027/fee", "permanent": false },
+    { "source": "/presentation-schedule", "destination": "/2027/presentation-schedule", "permanent": false },
+    { "source": "/review-policy", "destination": "/2027/review-policy", "permanent": false },
+    { "source": "/schedule", "destination": "/2027/schedule", "permanent": false },
+    { "source": "/submission-guidelines", "destination": "/2027/submission-guidelines", "permanent": false },
+    { "source": "/topics", "destination": "/2027/topics", "permanent": false }
+  ]
+}

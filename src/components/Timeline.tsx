@@ -8,8 +8,39 @@ import {
   FileText,
   CheckCircle,
 } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 const Timeline = () => {
+  const pathname = usePathname() || "";
+  const is2026 = pathname.includes("/2026");
+
+  if (!is2026) {
+    return (
+      <section
+        className="section-padding bg-gray-50 mb-24 py-16 px-5"
+        id="important-dates"
+      >
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-gray-900 mb-4">
+              Conference <span className="gradient-text">Timeline</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              Important dates and milestones for IC-AISIS 2027 will be announced soon.
+            </p>
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 max-w-md mx-auto">
+              <Calendar className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Timeline Coming Soon</h3>
+              <p className="text-gray-500 text-sm">
+                Dates for paper submission, registration, and notification will be published shortly. Stay tuned!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   const timelineEvents = [
     {
       date: "December 03, 2025",
