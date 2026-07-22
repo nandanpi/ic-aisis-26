@@ -33,13 +33,15 @@ const PartnerAssociation: React.FC<PartnerAssociationProps> = ({ variant = "hero
               <span className="text-xs font-semibold tracking-wide uppercase text-blue-100">
                 In association with
               </span>
-              <Image
-                src="/2027/Ritsumeikan-University.png"
-                alt="Ritsumeikan University logo"
-                width={120}
-                height={32}
-                className="h-auto w-auto max-w-[9rem]"
-              />
+              <div className="rounded bg-white p-1 flex items-center justify-center">
+                <Image
+                  src="/2027/Ritsumeikan-University.png"
+                  alt="Ritsumeikan University logo"
+                  width={120}
+                  height={32}
+                  className="h-auto w-auto max-w-[12rem]"
+                />
+              </div>
               <span className="text-xs md:text-sm font-medium">
                 Ritsumeikan University, Japan
               </span>
@@ -54,7 +56,7 @@ const PartnerAssociation: React.FC<PartnerAssociationProps> = ({ variant = "hero
                   Ritsumeikan University, Japan
                 </span>
               </div>
-              <div className="flex-shrink-0">
+              <div className="flex-shrink-0 rounded-xl bg-white p-1 flex items-center justify-center">
                 <Image
                   src="/2027/Ritsumeikan-University.png"
                   alt="Ritsumeikan University logo"

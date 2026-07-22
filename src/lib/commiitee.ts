@@ -252,7 +252,7 @@ const technicalCommittee = [
       "Department of Mechanical Engineering, Faculty of Science and Engineering, Ritsumeikan University, Japan",
   },
   {
-    name: "Assistant Prof. NURUL Nadiah Binti Mahmud",
+    name: "Assistant Prof. MAHMUD NURUL NADIAH BINTI",
     title:
       "Department of Mechanical Engineering, Faculty of Science and Engineering, Ritsumeikan University, Japan",
   },

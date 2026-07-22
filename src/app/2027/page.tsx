@@ -38,16 +38,16 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-br from-transparent via-blue-600/10 to-transparent"></div>
           </div>
 
-          <div className="relative z-10 mx-5 pt-24 pb-16">
+          <div className="relative z-10 mx-5 pt-20 pb-10">
             <div className="max-w-5xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div className="lg:col-span-7 text-white">
-                  <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-sm font-medium mb-2 border border-white/20">
-                    <Calendar className="w-4 h-4 mr-2" />
+                  <div className="inline-flex items-center px-4 py-1.5 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-xs font-medium mb-3 border border-white/20">
+                    <Calendar className="w-3.5 h-3.5 mr-2" />
                     IC-AISIS 2027 • Date & Mode Coming Soon
                   </div>
 
-                  <h1 className="text-4xl lg:text-6xl font-display font-bold mb-6 leading-tight">
+                  <h1 className="text-3xl lg:text-5xl font-display font-bold mb-4 leading-tight">
                     2nd International Conference on{" "}
                     <span className="bg-gradient-to-r from-blue-200 to-white bg-clip-text text-transparent">
                       Artificial Intelligence
@@ -55,21 +55,21 @@ export default function Home() {
                     for Sustainability and Intelligent Systems
                   </h1>
 
-                  <p className="text-xl text-blue-100 mb-8 max-w-2xl leading-relaxed">
+                  <p className="text-lg text-blue-100 mb-6 max-w-2xl leading-relaxed">
                     Join researchers, academicians, and professionals from
                     around the world to explore how AI can shape a sustainable
                     future at NMAM Institute of Technology, Nitte.
                   </p>
 
-                  <div className="flex flex-col sm:flex-row gap-4 mb-6">
-                    <button className="bg-gray-300 text-gray-600 px-8 py-4 w-full rounded-xl font-semibold cursor-not-allowed inline-flex items-center shadow-none" disabled>
-                      <Download className="w-5 h-5 mr-2" />
+                  <div className="flex flex-col sm:flex-row gap-3 mb-6">
+                    <button className="bg-white text-blue-600 px-6 py-3 w-full rounded-xl font-semibold cursor-not-allowed inline-flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-85" disabled>
+                      <Download className="w-4 h-4 mr-2" />
                       Download Brochure (Coming Soon)
                     </button>
                     <button
-                      className="border-2 border-gray-300 text-gray-300 px-8 py-4 rounded-xl font-semibold cursor-not-allowed inline-flex items-center backdrop-blur-sm" disabled
+                      className="border-2 border-white/80 text-white px-6 py-3 w-full rounded-xl font-semibold cursor-not-allowed inline-flex items-center justify-center backdrop-blur-sm disabled:opacity-60" disabled
                     >
-                      <Notebook className="w-5 h-5 mr-2" />
+                      <Notebook className="w-4 h-4 mr-2" />
                       Submit Paper (Coming Soon)
                     </button>
                   </div>
@@ -80,103 +80,100 @@ export default function Home() {
                 </div>
 
                 <div className="lg:col-span-5">
-                  <div className="space-y-6">
-                    <div className="bg-white/95 backdrop-blur-md rounded-2xl p-8 shadow-2xl border border-white/20">
-                      <div className="flex items-center mb-6">
-                        <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-4">
-                          <Calendar className="w-6 h-6 text-blue-600" />
+                  <div className="space-y-4">
+                    <div className="bg-white/95 backdrop-blur-md rounded-2xl p-5 shadow-2xl border border-white/20">
+                      <div className="flex items-center mb-4">
+                        <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center mr-3">
+                          <Calendar className="w-5 h-5 text-blue-600" />
                         </div>
                         <div>
-                          <h3 className="text-xl font-semibold text-gray-900">
+                          <h3 className="text-lg font-semibold text-gray-900">
                             Conference Details
                           </h3>
-                          <p className="text-gray-600">IC-AISIS 2027</p>
+                          <p className="text-xs text-gray-500">IC-AISIS 2027</p>
                         </div>
                       </div>
 
-                      <div className="space-y-4">
-                        <div className="flex items-center text-gray-700">
-                          <MapPin className="w-5 h-5 mr-3 text-blue-600" />
+                      <div className="space-y-3">
+                        <div className="flex items-center text-gray-700 text-sm">
+                          <MapPin className="w-4 h-4 mr-3 text-blue-600 flex-shrink-0" />
                           <div>
                             <p className="font-medium">
                               NMAM Institute of Technology, Nitte
                             </p>
-                            <p className="text-sm text-gray-500">
+                            <p className="text-xs text-gray-500">
                               Karnataka, India
                             </p>
                           </div>
                         </div>
-                        <div className="flex items-center text-gray-700">
-                          <Clock className="w-5 h-5 mr-3 text-blue-600" />
+                        <div className="flex items-center text-gray-700 text-sm">
+                          <Clock className="w-4 h-4 mr-3 text-blue-600 flex-shrink-0" />
                           <div>
                             <p className="font-medium">Coming Soon</p>
-                            <p className="text-sm text-gray-500">
+                            <p className="text-xs text-gray-500">
                               To be announced
                             </p>
                           </div>
                         </div>
-                        <div className="flex items-center text-gray-700">
-                          <Award className="w-5 h-5 mr-3 text-blue-600" />
+                        <div className="flex items-center text-gray-700 text-sm">
+                          <Award className="w-4 h-4 mr-3 text-blue-600 flex-shrink-0" />
                           <div>
-                            <p className="font-medium">Publishing Partner: Coming Soon (Scopus Indexed)</p>
-                            <p className="text-sm text-gray-500">
-                              Details will be updated
+                            <p className="font-medium">Publishing Partner: Coming Soon</p>
+                            <p className="text-xs text-gray-500">
+                              Scopus Indexed (Details will be updated)
                             </p>
                           </div>
                         </div>
                       </div>
-                    </div>
 
-                    <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-6 text-white shadow-xl">
-                      <h4 className="font-semibold mb-3">Quick Actions</h4>
-                      <div className="space-y-3">
-                        <a
-                          href="/submission-guidelines"
-                          className="block text-sm hover:text-blue-200 transition-colors"
-                        >
-                          → Submission Guidelines
-                        </a>
-                        <a
-                          href="/schedule"
-                          className="block text-sm hover:text-blue-200 transition-colors"
-                        >
-                          → View Schedule
-                        </a>
-                        <a
-                          href="/topics"
-                          className="block text-sm hover:text-blue-200 transition-colors"
-                        >
-                          → Research Topics
-                        </a>
-                        <span className="block text-sm opacity-60">
-                          → Submit Paper (Coming Soon)
-                        </span>
+                      <div className="border-t border-gray-150 mt-4 pt-4">
+                        <h4 className="font-semibold text-gray-900 text-xs uppercase tracking-wider mb-2">Quick Links</h4>
+                        <div className="grid grid-cols-2 gap-2 text-xs">
+                          <a
+                            href="/2027/submission-guidelines"
+                            className="bg-gray-50 hover:bg-blue-50 text-gray-700 hover:text-blue-700 p-2 rounded-lg transition-colors border border-gray-100 font-medium"
+                          >
+                            Submission Guidelines
+                          </a>
+                          <a
+                            href="/2027/schedule"
+                            className="bg-gray-50 hover:bg-blue-50 text-gray-700 hover:text-blue-700 p-2 rounded-lg transition-colors border border-gray-100 font-medium"
+                          >
+                            View Schedule
+                          </a>
+                          <a
+                            href="/2027/topics"
+                            className="bg-gray-50 hover:bg-blue-50 text-gray-700 hover:text-blue-700 p-2 rounded-lg transition-colors border border-gray-100 font-medium"
+                          >
+                            Research Topics
+                          </a>
+                          <span
+                            className="bg-gray-50 text-gray-400 p-2 rounded-lg border border-gray-100 font-medium opacity-60 cursor-not-allowed"
+                          >
+                            Submit Paper (Soon)
+                          </span>
+                        </div>
                       </div>
                     </div>
 
                     <Link href={"/2027/about?tab=theme"}>
-                      <div className="bg-white/95 cursor-pointer backdrop-blur-md rounded-2xl p-6 shadow-2xl border border-white/20">
-                        <div className="flex items-start gap-4">
-                          <div className="flex-shrink-0 ">
+                      <div className="bg-white/95 cursor-pointer hover:bg-gray-50 transition-colors backdrop-blur-md rounded-2xl p-4 shadow-2xl border border-white/20">
+                        <div className="flex items-center gap-3">
+                          <div className="flex-shrink-0">
                             <Image
                               src="/sdg-9-logo.png"
                               alt="SDG 9 - Industry, Innovation and Infrastructure"
-                              width={64}
-                              height={64}
-                              className="rounded-xl shadow-sm"
+                              width={44}
+                              height={44}
+                              className="rounded-lg shadow-sm"
                             />
                           </div>
-                          <div>
-                            <h4 className="font-semibold text-gray-900">
-                              SDG 9: Industry, Innovation and Infrastructure
+                          <div className="min-w-0">
+                            <h4 className="font-semibold text-gray-900 text-sm truncate">
+                              SDG 9: Industry, Innovation & Infrastructure
                             </h4>
-                            <p className="text-sm text-gray-600">
-                              Primary Focus of IC-AISIS&apos;27
-                            </p>
-                            <p className="text-sm text-gray-500 mt-2">
-                              <strong>SDG 9</strong> aims for resilient
-                              infrastructure, sustainable industrialisation, and
-                              innovation.
+                            <p className="text-xs text-gray-500">
+                              Primary Focus of IC-AISIS&apos;27 (Click to read more)
                             </p>
                           </div>
                         </div>
