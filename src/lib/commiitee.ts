@@ -24,13 +24,6 @@ const steeringCommittee = [
       "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665140/moodithaya_Large_ok3g5t.jpg",
   },
   {
-    name: "Prof. (Dr.) Gopal Mugeraya",
-    title:
-      "Vice-President (Technical Education), Nitte (Deemed to be University)",
-    image:
-      "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665133/gopalMugeraya_Large_rbvu6z.jpg",
-  },
-  {
     name: "Dr. Harsha Halahalli",
     title: "Registrar, Nitte (Deemed to be University)",
     image:
@@ -360,47 +353,11 @@ const technicalCommittee = [
     title:
       "Assistant Professor, Department of Information Technology, NITK, Surathkal",
   },
-  {
-    name: "Dr. Rashmi M.",
-    title:
-      "Assistant Professor, Department of Data Science and Computer Applications MIT, Manipal",
-  },
-  {
-    name: "Dr. Elakkiya Rajasekar",
-    title:
-      "Assistant Professor, Department of Computer Science, BITS Pilani, Dubai",
-  },
-  {
-    name: "Dr. Anand R",
-    title: "Senior Lecturer, Department of Computing, Coventry University, Astana, Kazakhstan",
-  },
-  {
-    name: "Dr. Rohini, R Rao",
-    title:
-      "Associate Professor, Department of Data Science and Computer Applications, MIT, Manipal",
-  },
-  {
-    name: "Dr. Savitha G",
-    title: "Department of Data Science and Computer Applications, MIT, Manipal",
-  },
+  
   {
     name: "Dr. Sunil C K",
     title: "Assistant Professor, Department of CSE, IIIT, Dharwad",
   },
-  {
-    name: "Dr. Murthy D H R",
-    title:
-      "Associate Professor, Department of CSE, R. L. Jalappa Institute of Technology, Doddaballapur",
-  },
-  {
-    name: "Ms. Priyanka H L",
-    title:
-      "Assistant Professor, Department Information Science and Engineering, Malnad College of Engineering, Hassan",
-  },
-  {
-    name: "Mr. Shreekant Jere",
-    title: "Associate Manager, AI Labs, Accenture Solutions Pvt Ltd, Bangalore",
-  }
 ];
 
 const studentOrganizers = [
