@@ -50,6 +50,11 @@ const steeringCommittee = [
 ];
 
 const generalChairs = [
+    {
+    name: "Prof. ITOH Takamoto（伊藤 隆基）",
+    title: "Professor, Department of Mechanical Engineering, Faculty of Science and Engineering, Ritsumeikan University, Japan",
+    image: "https://en.ritsumei.ac.jp/image.jsp?id=554728&version=English",
+  },
   {
     name: "Dr. Shashank Shetty",
     title: "Associate Professor, Department of CSE, NMAMIT, Nitte",
@@ -216,6 +221,67 @@ const executiveCommittee = [
 ];
 
 const technicalCommittee = [
+{
+    name: "Prof. SATOFUKA Yoshifumi（里深 好文）",
+    title:
+      "Dean, Department of Civil and Environmental Engineering, Faculty of Science and Engineering, Ritsumeikan University, Japan",
+  },
+  {
+    name: "Prof. TAKABA Kiyotsugu（鷹羽 浄嗣）",
+    title:
+      "Vice Dean (International Affairs), Department of Electrical and Electronic Engineering, Faculty of Science and Engineering, Ritsumeikan University, Japan",
+  },
+  {
+    name: "Prof. NOZAKA Katsuyoshi（野阪 克義）",
+    title:
+      "Vice Director, International Office, Department of Civil and Environmental Engineering, Faculty of Science and Engineering, Ritsumeikan University, Japan",
+  },
+  {
+    name: "Prof. FUJIWARA Hiroshi（藤原 弘）",
+    title:
+      "Department of Mechanical Engineering, Faculty of Science and Engineering, Ritsumeikan University, Japan",
+  },
+  {
+    name: "Associate Prof. NAMBU Koichiro（南部 紘一郎）",
+    title:
+      "Department of Mechanical Engineering, Faculty of Science and Engineering, Ritsumeikan University, Japan",
+  },
+  {
+    name: "Associate Prof. FURUTA Kozo（古田 幸三）",
+    title:
+      "Department of Mechanical Engineering, Faculty of Science and Engineering, Ritsumeikan University, Japan",
+  },
+  {
+    name: "Assistant Prof. NURUL Nadiah Binti Mahmud",
+    title:
+      "Department of Mechanical Engineering, Faculty of Science and Engineering, Ritsumeikan University, Japan",
+  },
+  {
+    name: "Prof. SHIMONOMURA Kazuhiro（下ノ村 和弘）",
+    title:
+      "Department of Robotics, Faculty of Science and Engineering, Ritsumeikan University, Japan",
+  },
+  {
+    name: "Assistant Prof. PAUL Hannibal",
+    title:
+      "Department of Robotics, Faculty of Science and Engineering, Ritsumeikan University, Japan",
+  },
+  {
+    name: "Prof. KUMAKI Takeshi（熊木 武志）",
+    title:
+      "Department of Electrical and Electronic Engineering, Faculty of Science and Engineering, Ritsumeikan University, Japan",
+  },
+  {
+    name: "Prof. MENG Lin（孟 林）",
+    title:
+      "Department of Electrical and Electronic Engineering, Faculty of Science and Engineering, Ritsumeikan University, Japan",
+  },
+  {
+    name: "Prof. SHIOMI Yasuhiro（塩見 康博）",
+    title:
+      "Former Vice Dean (International Affairs), Department of Civil and Environmental Engineering, Faculty of Science and Engineering, Ritsumeikan University, Japan",
+  },
+  //----------------------------------------------2026
   {
     name: "Prof. Ts. Dr. Asmarashid Bin Ponniran",
     title:

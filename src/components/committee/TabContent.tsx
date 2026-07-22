@@ -226,7 +226,7 @@ export default function TabContent({ tabId }: TabContentProps) {
       );
 
     case "technical":
-      if (!is2026) {
+      if (technicalCommittee.length === 0) {
         return (
           <div>
             <div className="text-center mb-8">
