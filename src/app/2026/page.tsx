@@ -13,7 +13,7 @@ import Timeline from "@/components/Timeline";
 import { useState } from "react";
 import PageLoader from "@/components/layout/PageLoader";
 import Link from "next/link";
-import UthmAssociation from "@/components/UthmAssociation";
+import PartnerAssociation from "@/components/PartnerAssociation";
 
 export default function Home() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -81,7 +81,7 @@ export default function Home() {
                   </div>
 
                   <div className="mt-2">
-                    <UthmAssociation variant="hero" />
+                    <PartnerAssociation variant="hero" />
                   </div>
                 </div>
 

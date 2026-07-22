@@ -8,7 +8,7 @@ import {
   ExternalLink,
   ArrowRight,
 } from "lucide-react";
-import UthmAssociation from "@/components/UthmAssociation";
+import PartnerAssociation from "@/components/PartnerAssociation";
 import { usePathname } from "next/navigation";
 
 const Footer = () => {
@@ -234,7 +234,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-10 flex justify-center">
-          <UthmAssociation variant="footer" />
+          <PartnerAssociation variant="footer" />
         </div>
       </div>
 
