@@ -98,7 +98,7 @@ const Footer = () => {
                   <p className="text-sm text-gray-400">
                     {is2026
                       ? "Hybrid Mode Conference (Virtual Mode is Only for the participants Outsite Karnataka)"
-                      : "Hybrid Mode Conference"
+                      : "Offline Mode Conference"
                     }
                   </p>
                 </div>
