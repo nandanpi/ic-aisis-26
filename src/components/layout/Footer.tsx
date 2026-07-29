@@ -93,13 +93,14 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-white">
-                    {is2026 ? "January 24, 2026" : "Coming Soon"}
+                    {is2026 ? "January 24, 2026" : <>July 2<sup>nd</sup> and 3<sup>rd</sup>, 2027</>}
                   </p>
-                  {is2026 && (
-                    <p className="text-sm text-gray-400">
-                      Hybrid Mode Conference (Virtual Mode is Only for the participants Outsite Karnataka)
-                    </p>
-                  )}
+                  <p className="text-sm text-gray-400">
+                    {is2026
+                      ? "Hybrid Mode Conference (Virtual Mode is Only for the participants Outsite Karnataka)"
+                      : "Hybrid Mode Conference"
+                    }
+                  </p>
                 </div>
               </div>
 

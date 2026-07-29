@@ -47,7 +47,7 @@ export default function Schedule() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-sm font-medium mb-8 border border-white/20">
               <Calendar className="w-4 h-4 mr-2" />
-              Coming Soon
+              July 2<sup>nd</sup> and 3<sup>rd</sup>, 2027 • 2 Days • Hybrid Mode
             </div>
 
             <h1 className="text-4xl lg:text-5xl font-display font-bold text-white mb-6">
@@ -55,7 +55,7 @@ export default function Schedule() {
             </h1>
 
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Join us for one day of cutting-edge research presentations,
+              Join us for two days of cutting-edge research presentations,
               keynote speeches, and networking opportunities in AI and
               sustainability.
             </p>

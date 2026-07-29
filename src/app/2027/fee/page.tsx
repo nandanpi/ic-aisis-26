@@ -1,4 +1,5 @@
 "use client";
+import { colorClasses2 } from "@/lib/colorClasses";
 import {
   CreditCard,
   GraduationCap,
@@ -10,6 +11,18 @@ import { useState } from "react";
 
 export default function RegistrationFees() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const feeCategories = [
+    {
+      category: "Registration Fee",
+      icon: <GraduationCap className="w-6 h-6" />,
+      color: "blue",
+      description:
+        "Standard registration fee for all presenting authors and participants",
+      fees: {
+        amount: "₹8,000",
+      },
+    },
+  ];
 
   return (
     <div className="min-h-screen pt-16">
@@ -49,7 +62,7 @@ export default function RegistrationFees() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-sm font-medium mb-8 border border-white/20">
               <CreditCard className="w-4 h-4 mr-2" />
-              Registration Opening soon • Early Bird Rates Available
+              Registration Opening Soon
             </div>
 
             <h1 className="text-4xl lg:text-5xl font-display font-bold text-white mb-6">
@@ -57,8 +70,7 @@ export default function RegistrationFees() {
             </h1>
 
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Choose your registration category and secure your spot at IC-AISIS
-              2027.
+              Register and secure your spot at IC-AISIS 2027.
             </p>
             {// Early bird rates available until 15 January 2027.
             }
@@ -84,12 +96,52 @@ export default function RegistrationFees() {
             </p>
           </div>
 
-          <div className="bg-blue-50 border border-blue-200 rounded-2xl p-8 max-w-2xl mx-auto text-center shadow-md">
-            <CreditCard className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">Registration Fees Coming Soon</h3>
-            <p className="text-gray-600">
-              The registration categories and fee structure for IC-AISIS 2027 are currently being finalized and will be updated here shortly.
-            </p>
+          <div className="grid grid-cols-1 gap-8 justify-items-center">
+            {feeCategories.map((category, index) => {
+              const colors =
+                colorClasses2[category.color as keyof typeof colorClasses2];
+              return (
+                <div
+                  key={index}
+                  className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 w-full max-w-md"
+                >
+                  <div
+                    className={`bg-gradient-to-r h-32 ${colors.gradient} p-6`}
+                  >
+                    <div className="flex items-center mb-4">
+                      <div
+                        className={`w-12 h-12 rounded-xl ${colors.icon} flex items-center justify-center mr-4`}
+                      >
+                        {category.icon}
+                      </div>
+                      <div className="flex-1">
+                        <div>
+                          <h3 className="text-xl font-bold text-gray-900">
+                            {category.category}
+                          </h3>
+                          <p className="text-gray-600 text-sm">
+                            {category.description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="p-6">
+                    <div className="space-y-4 mb-6">
+                      <div className="flex justify-between items-center p-4 bg-blue-50 rounded-lg border border-blue-200">
+                        <span className="text-sm font-medium text-gray-700">
+                          Registration Fee
+                        </span>
+                        <span className="text-xl font-bold text-blue-700">
+                          {category.fees.amount}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -238,9 +290,6 @@ export default function RegistrationFees() {
                       • Author registration is mandatory for paper presentation
                     </li>
                     <li>
-                      • International participants can pay in USD as mentioned
-                    </li>
-                    <li>
                       • Registration form will be available soon on our website
                     </li>
                   </ul>
@@ -257,8 +306,7 @@ export default function RegistrationFees() {
             Ready to Register?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Don&apos;t miss out on early bird rates. Register now and join us
-            for this premier conference.
+            Register now and join us for this premier conference.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <div className="text-blue-600 outline px-8 py-4 rounded-xl font-semibold ">

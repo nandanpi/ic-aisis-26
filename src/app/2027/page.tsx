@@ -44,7 +44,7 @@ export default function Home() {
                 <div className="lg:col-span-7 text-white">
                   <div className="inline-flex items-center px-4 py-1.5 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-xs font-medium mb-3 border border-white/20">
                     <Calendar className="w-3.5 h-3.5 mr-2" />
-                    IC-AISIS 2027 • Date & Mode Coming Soon
+                    July 2<sup>nd</sup> and 3<sup>rd</sup>, 2027 • Hybrid Mode
                   </div>
 
                   <h1 className="text-3xl lg:text-5xl font-display font-bold mb-4 leading-tight">
@@ -109,9 +109,9 @@ export default function Home() {
                         <div className="flex items-center text-gray-700 text-sm">
                           <Clock className="w-4 h-4 mr-3 text-blue-600 flex-shrink-0" />
                           <div>
-                            <p className="font-medium">Coming Soon</p>
+                            <p className="font-medium">July 2<sup>nd</sup> and 3<sup>rd</sup>, 2027</p>
                             <p className="text-xs text-gray-500">
-                              To be announced
+                              Two day conference
                             </p>
                           </div>
                         </div>
@@ -226,7 +226,7 @@ export default function Home() {
               },
               {
                 title: "Hybrid Participation",
-                description: "Details on mode and participation will be announced soon",
+                description: "In-person and virtual presentation and participation options",
                 icon: "🌐",
               },
               {
