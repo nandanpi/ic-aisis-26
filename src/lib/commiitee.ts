@@ -1,8 +1,8 @@
 const patron = {
-  name: "Sri N. Vinaya Hegde",
-  title: "Founder Chancellor",
-  image:
-    "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665153/vinayaHegde_Large_p5i0ih.jpg",
+  name: "Sri Vishal Hegde",
+  title:
+    "Chancellor, Nitte (Deemed to be University) & President, Nitte Education Trust, Mangaluru",
+  image: "https://nitte.edu.in/img/leadership/vishal-hegde.jpg",
 };
 
 const steeringCommittee = [
@@ -10,12 +10,6 @@ const steeringCommittee = [
     name: "Prof. (Dr.) M. Shantharam Shetty",
     title: "Pro-Chancellor",
     image: "https://nitte.edu.in/img/leadership/Prof.Shetty.jpg",
-  },
-  {
-    name: "Sri Vishal Hegde",
-    title:
-      "Chancellor, Nitte (Deemed to be University) & President, Nitte Education Trust, Mangaluru",
-    image: "https://nitte.edu.in/img/leadership/vishal-hegde.jpg",
   },
   {
     name: "Prof. (Dr.) M. S. Moodithaya",
