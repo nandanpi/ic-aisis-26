@@ -1,7 +1,7 @@
 const patron = [
   {
     name: "Late Shri Nitte Vinaya Hegde",
-    title: "Revered Founder Chancellor Nitte (DU)",
+    title: "Revered Founder Chancellor, Nitte (DU)",
     image:
       "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665153/vinayaHegde_Large_p5i0ih.jpg",
   },
