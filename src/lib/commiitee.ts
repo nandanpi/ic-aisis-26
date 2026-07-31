@@ -1,7 +1,7 @@
 const patron = {
   name: "Sri Vishal Hegde",
   title:
-    "Chancellor, Nitte (Deemed to be University) & President, Nitte Education Trust, Mangaluru",
+    "Chancellor, Nitte (Deemed to be University), Mangaluru",
   image: "https://nitte.edu.in/img/leadership/vishal-hegde.jpg",
 };
 
