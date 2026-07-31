@@ -146,11 +146,6 @@ const executiveCommittee = [
     image: "https://nitte.edu.in/admin/photo/3/faculty/5/62.jpg",
   },
   {
-    name: "Dr. Roshan Fernandes",
-    title: "HoD, Dept. of Computer Science Engineering (Cyber Security)",
-    image: "https://nitte.edu.in/admin/photo/3/faculty/179/2842.jpg",
-  },
-  {
     name: "Dr. Rajalaxmi Samaga B L",
     title: "HoD, Dept. of Electrical & Electronics Engineering",
     image: "https://nitte.edu.in/admin/photo/3/faculty/6/2287.jpg",
