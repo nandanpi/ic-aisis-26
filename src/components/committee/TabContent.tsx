@@ -32,6 +32,8 @@ export default function TabContent({ tabId }: TabContentProps) {
     technicalCommittee,
   } = committee;
 
+  const patronsList = Array.isArray(patron) ? patron : [patron];
+
   switch (tabId) {
     case "leadership":
       return (
@@ -42,29 +44,40 @@ export default function TabContent({ tabId }: TabContentProps) {
                 <Award className="w-8 h-8 text-purple-600" />
               </div>
               <h3 className="text-2xl font-display font-bold text-gray-900 mb-2">
-                Patron
+                {patronsList.length > 1 ? "Patrons" : "Patron"}
               </h3>
               <p className="text-gray-600">
                 Guiding vision and leadership for the conference
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 border border-purple-200">
-              <div className="flex flex-col items-center text-center">
-                <Image
-                  width={100}
-                  height={100}
-                  src={patron.image || "/placeholder.svg"}
-                  alt={patron.name}
-                  className="w-32 h-32 rounded-full object-cover mb-6 border-4 border-white shadow-lg"
-                />
-                <h4 className="text-2xl font-bold text-gray-900 mb-2">
-                  {patron.name}
-                </h4>
-                <p className="text-purple-700 font-medium leading-relaxed max-w-2xl">
-                  {patron.title}
-                </p>
-              </div>
+            <div
+              className={`grid grid-cols-1 ${
+                patronsList.length > 1 ? "md:grid-cols-2 max-w-4xl" : "max-w-2xl"
+              } gap-8 mx-auto`}
+            >
+              {patronsList.map((p, index) => (
+                <div
+                  key={index}
+                  className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 border border-purple-200"
+                >
+                  <div className="flex flex-col items-center text-center">
+                    <Image
+                      width={100}
+                      height={100}
+                      src={p.image || "/placeholder.svg"}
+                      alt={p.name}
+                      className="w-32 h-32 rounded-full object-cover mb-6 border-4 border-white shadow-lg"
+                    />
+                    <h4 className="text-2xl font-bold text-gray-900 mb-2">
+                      {p.name}
+                    </h4>
+                    <p className="text-purple-700 font-medium leading-relaxed max-w-2xl">
+                      {p.title}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
