@@ -1,11 +1,5 @@
 const patron = [
   {
-    name: "Late Shri Nitte Vinaya Hegde",
-    title: "Revered Founder Chancellor, Nitte (DU)",
-    image:
-      "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665153/vinayaHegde_Large_p5i0ih.jpg",
-  },
-  {
     name: "Sri Vishal Hegde",
     title: "Chancellor, Nitte (Deemed to be University), Mangaluru",
     image: "https://nitte.edu.in/img/leadership/vishal-hegde.jpg",
