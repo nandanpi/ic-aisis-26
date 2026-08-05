@@ -10,13 +10,11 @@ import {
 } from "lucide-react";
 import PartnerAssociation from "@/components/PartnerAssociation";
 import { usePathname } from "next/navigation";
-
-interface FooterDate {
-  date: string;
-  event: string;
-  oldDates?: string[];
-  isHardDeadline?: boolean;
-}
+import {
+  importantDates2026,
+  importantDates2027,
+  ImportantDate,
+} from "@/lib/timeline";
 
 const Footer = () => {
   const pathname = usePathname() || "";
@@ -44,54 +42,7 @@ const Footer = () => {
     { href: "/contact", label: "Contact Support" },
   ];
 
-  const importantDates2026: FooterDate[] = [
-    {
-      date: "8 January 2026",
-      oldDates: ["20 December 2025", "25 December 2025", "03 January 2026"],
-      event: "Paper Submission Deadline",
-      isHardDeadline: true
-    },
-    {
-      date: "12 January 2026",
-      oldDates: ["25 December 2025", "30 December 2025", "06 January 2026", "10 January 2026"],
-      event: "Notification of Acceptance"
-    },
-    {
-      date: "15 January 2026",
-      oldDates: ["31 December 2025", "05 January 2026", "8 January 2026", "12 January 2026"],
-      event: "Early Bird Registration"
-    },
-    {
-      date: "16 January 2026",
-      oldDates: ["05 January 2026", "10 January 2026", "13 January 2026"],
-      event: "Regular Registration"
-    },
-    {
-      date: "24 January 2026",
-      event: "Conference Date"
-    },
-  ];
-
-  const importantDates2027: FooterDate[] = [
-    {
-      date: "15 January 2027",
-      event: "Paper Submission Deadline"
-    },
-    {
-      date: "15 March 2027",
-      event: "Notification of Acceptance"
-    },
-    {
-      date: "20 April 2027",
-      event: "Registration Deadline"
-    },
-    {
-      date: "02–03 July 2027",
-      event: "Conference Dates"
-    },
-  ];
-
-  const importantDates = is2026 ? importantDates2026 : importantDates2027;
+  const importantDates: ImportantDate[] = is2026 ? importantDates2026 : importantDates2027;
 
   return (
     <footer className="bg-gray-900 text-white relative overflow-hidden flex flex-col justify-center items-center px-5">
@@ -193,47 +144,40 @@ const Footer = () => {
               Important Dates
             </h4>
             <div className="space-y-4 mb-8">
-              {is2026 ? (
-                importantDates.map((item, index) => (
-                  <div
-                    key={index}
-                    className={`flex flex-col p-3 rounded-lg border ${item.isHardDeadline
-                      ? "bg-red-900/30 border-red-700/50"
-                      : "bg-gray-800/50 border-gray-700/50"
-                      }`}
-                  >
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-gray-300 text-sm">{item.event}</span>
-                      {item.isHardDeadline && (
-                        <span className="bg-red-600 text-white px-2 py-0.5 rounded-full text-xs font-bold">
-                          Hard Deadline
-                        </span>
-                      )}
-                    </div>
-                    {item.oldDates && item.oldDates.length > 0 && (
-                      <div className="flex flex-wrap gap-1 mb-1">
-                        {item.oldDates.map((oldDate, idx) => (
-                          <span
-                            key={idx}
-                            className="text-gray-500 text-xs line-through opacity-60"
-                          >
-                            {oldDate}
-                          </span>
-                        ))}
-                      </div>
+              {importantDates.map((item, index) => (
+                <div
+                  key={index}
+                  className={`flex flex-col p-3 rounded-lg border ${item.isHardDeadline
+                    ? "bg-red-900/30 border-red-700/50"
+                    : "bg-gray-800/50 border-gray-700/50"
+                    }`}
+                >
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="text-gray-300 text-sm">{item.event}</span>
+                    {item.isHardDeadline && (
+                      <span className="bg-red-600 text-white px-2 py-0.5 rounded-full text-xs font-bold">
+                        Hard Deadline
+                      </span>
                     )}
-                    <span className={`font-semibold text-sm ${item.isHardDeadline ? "text-red-400" : "text-blue-400"
-                      }`}>
-                      {item.date}
-                    </span>
                   </div>
-                ))
-              ) : (
-                <div className="bg-gray-800/50 border border-gray-700/50 p-4 rounded-lg text-center">
-                  <p className="text-blue-400 font-semibold text-sm">Important Dates</p>
-                  <p className="text-gray-300 text-xs mt-1 font-medium">Coming Soon</p>
+                  {item.oldDates && item.oldDates.length > 0 && (
+                    <div className="flex flex-wrap gap-1 mb-1">
+                      {item.oldDates.map((oldDate, idx) => (
+                        <span
+                          key={idx}
+                          className="text-gray-500 text-xs line-through opacity-60"
+                        >
+                          {oldDate}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                  <span className={`font-semibold text-sm ${item.isHardDeadline ? "text-red-400" : "text-blue-400"
+                    }`}>
+                    {item.date}
+                  </span>
                 </div>
-              )}
+              ))}
             </div>
 
             <div className="space-y-4">
