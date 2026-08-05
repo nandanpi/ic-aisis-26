@@ -100,12 +100,15 @@ const Navbar = () => {
       ],
     },
     { href: "/topics", label: "Topics" },
-    is2026
-      ? {
-        downloadUrl: "https://docs.google.com/document/d/1lV8SbSj5a6jP94OIQOtXA3eA0yMFt3bKzyRD9aav68o/export?format=pdf",
-        label: "Presentation Schedule",
-      }
-      : { href: "/presentation-schedule", label: "Presentation Schedule" },
+    ...(is2026
+      ? [
+          {
+            downloadUrl:
+              "https://docs.google.com/document/d/1lV8SbSj5a6jP94OIQOtXA3eA0yMFt3bKzyRD9aav68o/export?format=pdf",
+            label: "Presentation Schedule",
+          },
+        ]
+      : []),
     { href: "/schedule", label: "Schedule" },
     {
       label: "Call for Papers",
