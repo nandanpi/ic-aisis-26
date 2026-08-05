@@ -8,6 +8,7 @@ import {
   Calendar,
 } from "lucide-react";
 import { useState } from "react";
+import { importantDates2027 } from "@/lib/timeline";
 
 export default function RegistrationFees() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -251,9 +252,24 @@ export default function RegistrationFees() {
             </p>
           </div>
 
-          <div className="bg-blue-50 border border-blue-100 rounded-2xl p-6 max-w-md mx-auto text-center shadow-md">
-            <Calendar className="w-8 h-8 text-blue-600 mx-auto mb-3" />
-            <p className="text-gray-700 font-medium">Dates Coming Soon</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+            {importantDates2027.map((date, index) => (
+              <div
+                key={index}
+                className="p-6 rounded-xl border-2 bg-blue-50 border-blue-200 shadow-md transition-all duration-200"
+              >
+                <div className="text-center">
+                  <Calendar className="w-6 h-6 text-blue-600 mx-auto mb-3" />
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    {date.event}
+                  </h3>
+                  <p className="text-gray-600 mb-3 font-semibold">{date.date}</p>
+                  <div className="inline-block px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-700">
+                    Upcoming
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

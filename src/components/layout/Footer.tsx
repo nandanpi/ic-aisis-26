@@ -11,6 +11,13 @@ import {
 import PartnerAssociation from "@/components/PartnerAssociation";
 import { usePathname } from "next/navigation";
 
+interface FooterDate {
+  date: string;
+  event: string;
+  oldDates?: string[];
+  isHardDeadline?: boolean;
+}
+
 const Footer = () => {
   const pathname = usePathname() || "";
   const is2026 = pathname.includes("/2026");
@@ -37,7 +44,7 @@ const Footer = () => {
     { href: "/contact", label: "Contact Support" },
   ];
 
-  const importantDates = [
+  const importantDates2026: FooterDate[] = [
     {
       date: "8 January 2026",
       oldDates: ["20 December 2025", "25 December 2025", "03 January 2026"],
@@ -64,6 +71,27 @@ const Footer = () => {
       event: "Conference Date"
     },
   ];
+
+  const importantDates2027: FooterDate[] = [
+    {
+      date: "15 January 2027",
+      event: "Paper Submission Deadline"
+    },
+    {
+      date: "15 March 2027",
+      event: "Notification of Acceptance"
+    },
+    {
+      date: "20 April 2027",
+      event: "Registration Deadline"
+    },
+    {
+      date: "02–03 July 2027",
+      event: "Conference Dates"
+    },
+  ];
+
+  const importantDates = is2026 ? importantDates2026 : importantDates2027;
 
   return (
     <footer className="bg-gray-900 text-white relative overflow-hidden flex flex-col justify-center items-center px-5">
