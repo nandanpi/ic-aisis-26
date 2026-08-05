@@ -48,7 +48,7 @@ export default function ReviewPolicy() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-sm font-medium mb-8 border border-white/20">
               <FileText className="w-4 h-4 mr-2" />
-              Paper Submission Deadlines: Coming Soon
+              Paper Submission Deadline: 15 January 2027
             </div>
 
             <h1 className="text-4xl lg:text-5xl font-display font-bold text-white mb-6">
@@ -78,6 +78,65 @@ export default function ReviewPolicy() {
 
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-5">
+          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 mb-8">
+            <div className="flex items-center mb-6">
+              <div className="w-12 h-12 aspect-square rounded-xl bg-blue-100 flex items-center justify-center mr-4">
+                <Users className="w-6 h-6 text-blue-600" />
+              </div>
+              <h2 className="text-2xl font-semibold text-gray-900">
+                Double-Blind Review Policy
+              </h2>
+            </div>
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              IC-AISIS&apos;27 follows a rigorous double-blind peer review process to ensure fairness, transparency, and the highest standards of scholarly excellence. All submitted manuscripts will be reviewed by at least two independent experts, and the identities of both authors and reviewers will remain anonymous throughout the review process.
+            </p>
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              Submitted papers must be original, unpublished, and not under consideration for publication in any other conference, journal, or workshop at the time of submission. Manuscripts found to contain plagiarism, fabricated data, or duplicate submissions will be rejected without further review. All submissions will be screened using plagiarism detection software and evaluated in accordance with the IEEE Publication Principles and IEEE policies on plagiarism and multiple submissions.
+            </p>
+            <p className="text-gray-600 mb-6 leading-relaxed">
+              Authors must ensure that their manuscripts are anonymized for double-blind review by removing names, affiliations, acknowledgements, and any other identifying information from the submitted version. Self-citations should be written in a manner that does not reveal the identity of the authors.
+            </p>
+            <div className="bg-blue-50 rounded-xl p-6 border border-blue-100">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                Upon acceptance, authors will be required to:
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center mr-3 mt-0.5">
+                    <span className="text-blue-600 font-semibold">1</span>
+                  </div>
+                  <p className="text-gray-700">
+                    Submit the final camera-ready manuscript incorporating reviewers&apos; comments.
+                  </p>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center mr-3 mt-0.5">
+                    <span className="text-blue-600 font-semibold">2</span>
+                  </div>
+                  <p className="text-gray-700">
+                    Complete and sign the required IEEE Electronic Copyright Form (eCF) (subject to IEEE publication approval).
+                  </p>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center mr-3 mt-0.5">
+                    <span className="text-blue-600 font-semibold">3</span>
+                  </div>
+                  <p className="text-gray-700">
+                    Register for the conference within the specified deadline.
+                  </p>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center mr-3 mt-0.5">
+                    <span className="text-blue-600 font-semibold">4</span>
+                  </div>
+                  <p className="text-gray-700">
+                    Present their accepted paper during the conference. Papers that are not presented may not be considered for inclusion in the conference proceedings.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 mb-8">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 aspect-square rounded-xl bg-blue-100 flex items-center justify-center mr-4">

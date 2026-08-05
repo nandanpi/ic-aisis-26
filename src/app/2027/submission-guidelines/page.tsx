@@ -188,7 +188,7 @@ export default function SubmissionGuidelines() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-sm font-medium mb-8 border border-white/20">
               <FileText className="w-4 h-4 mr-2" />
-              Paper Submission Deadlines: Coming Soon
+              Paper Submission Deadline: 15 January 2027
             </div>
 
             <h1 className="text-4xl lg:text-5xl font-display font-bold text-white mb-6">

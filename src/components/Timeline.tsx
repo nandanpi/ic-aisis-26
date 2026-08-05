@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import {
   Calendar,
   Clock,
@@ -10,38 +11,23 @@ import {
 } from "lucide-react";
 import { usePathname } from "next/navigation";
 
+interface TimelineEvent {
+  date: string;
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  status: string;
+  color: string;
+  isHardDeadline?: boolean;
+  highlight?: boolean;
+  oldDates?: string[];
+}
+
 const Timeline = () => {
   const pathname = usePathname() || "";
   const is2026 = pathname.includes("/2026");
 
-  if (!is2026) {
-    return (
-      <section
-        className="section-padding bg-gray-50 mb-24 py-16 px-5"
-        id="important-dates"
-      >
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-gray-900 mb-4">
-              Conference <span className="gradient-text">Timeline</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Important dates and milestones for IC-AISIS 2027 will be announced soon.
-            </p>
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 max-w-md mx-auto">
-              <Calendar className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Timeline Coming Soon</h3>
-              <p className="text-gray-500 text-sm">
-                Dates for paper submission, registration, and notification will be published shortly. Stay tuned!
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    );
-  }
-
-  const timelineEvents = [
+  const timelineEvents2026: TimelineEvent[] = [
     {
       date: "December 03, 2025",
       title: "Call for Papers Opens",
@@ -102,6 +88,102 @@ const Timeline = () => {
     },
   ];
 
+  const timelineEvents2027: TimelineEvent[] = [
+    {
+      date: "01 September 2026",
+      title: "Paper Submission System Opens",
+      description: "Submission portal opens for research papers and abstracts",
+      icon: <FileText className="w-5 h-5" />,
+      status: "upcoming",
+      color: "blue",
+    },
+    {
+      date: "15 January 2027",
+      title: "Full Paper Submission Deadline",
+      description: "Final deadline for submitting full research papers",
+      icon: <Clock className="w-5 h-5" />,
+      status: "upcoming",
+      color: "red",
+      isHardDeadline: true,
+    },
+    {
+      date: "31 January 2027",
+      title: "Extended Submission Deadline (if applicable)",
+      description: "Extended deadline for late submissions of research papers",
+      icon: <Clock className="w-5 h-5" />,
+      status: "upcoming",
+      color: "orange",
+    },
+    {
+      date: "15 March 2027",
+      title: "Notification of Acceptance",
+      description: "Authors will be notified about paper acceptance status",
+      icon: <CheckCircle className="w-5 h-5" />,
+      status: "upcoming",
+      color: "purple",
+    },
+    {
+      date: "10 April 2027",
+      title: "Camera-Ready Paper Submission",
+      description: "Deadline for submitting final camera-ready manuscripts",
+      icon: <FileText className="w-5 h-5" />,
+      status: "upcoming",
+      color: "blue",
+    },
+    {
+      date: "20 April 2027",
+      title: "Author Registration Deadline",
+      description: "Deadline for presenting authors to register for the conference",
+      icon: <Users className="w-5 h-5" />,
+      status: "upcoming",
+      color: "orange",
+    },
+    {
+      date: "20 April 2027",
+      title: "Early Bird Registration Ends",
+      description: "Deadline for early bird conference registration discount",
+      icon: <Users className="w-5 h-5" />,
+      status: "upcoming",
+      color: "green",
+    },
+    {
+      date: "15 May 2027",
+      title: "Presentation Schedule Announcement",
+      description: "Release of the presentation schedules for accepted papers",
+      icon: <Clock className="w-5 h-5" />,
+      status: "upcoming",
+      color: "purple",
+    },
+    {
+      date: "01 June 2027",
+      title: "Final Conference Program Release",
+      description: "Detailed program schedule announcement",
+      icon: <FileText className="w-5 h-5" />,
+      status: "upcoming",
+      color: "blue",
+    },
+    {
+      date: "02–03 July 2027",
+      title: "Conference Dates",
+      description: "Two-day international conference (IC-AISIS 2027)",
+      icon: <Award className="w-5 h-5" />,
+      status: "upcoming",
+      color: "red",
+      highlight: true,
+    },
+    {
+      date: "Post-Conference",
+      title: "Proceedings Submission",
+      description: "As per publishing partner workflow after the conference",
+      icon: <CheckCircle className="w-5 h-5" />,
+      status: "upcoming",
+      color: "green",
+    },
+  ];
+
+  const timelineEvents = is2026 ? timelineEvents2026 : timelineEvents2027;
+  const year = is2026 ? "2026" : "2027";
+
   const getStatusStyles = (status: string, color: string) => {
     if (status === "completed") {
       return {
@@ -120,6 +202,13 @@ const Timeline = () => {
         card: "bg-blue-50 border-blue-200",
         icon: "bg-blue-100 text-blue-600",
         badge: "bg-blue-100 text-blue-700",
+      },
+      green: {
+        dot: "bg-green-500 border-green-200",
+        line: "bg-gray-200",
+        card: "bg-green-50 border-green-200",
+        icon: "bg-green-100 text-green-600",
+        badge: "bg-green-100 text-green-700",
       },
       purple: {
         dot: "bg-purple-500 border-purple-200",
@@ -159,7 +248,7 @@ const Timeline = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Stay on track with all important dates and milestones leading up to
-            IC-AISIS 2026
+            IC-AISIS {year}
           </p>
         </div>
 
@@ -257,30 +346,33 @@ const Timeline = () => {
                       {event.status === "upcoming" &&
                         event.title.includes("Paper Submission Deadline") && (
                           <div className="mt-4 pt-4 border-t border-gray-200">
-                            <a
-                              href={
-                                "https://cmt3.research.microsoft.com/icaisis2025/Track/1/Submission/Create"
-                              }
-                              className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200"
-                            >
-                              {/* {event.title.includes("Deadline")
-                              ? "Register Now"
-                              : "Submit Paper"} */}
-                              Submit Paper
-                              <svg
-                                className="w-4 h-4 ml-2"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
+                            {is2026 ? (
+                              <a
+                                href={
+                                  "https://cmt3.research.microsoft.com/icaisis2025/Track/1/Submission/Create"
+                                }
+                                className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200"
                               >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M9 5l7 7-7 7"
-                                />
-                              </svg>
-                            </a>
+                                Submit Paper
+                                <svg
+                                  className="w-4 h-4 ml-2"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M9 5l7 7-7 7"
+                                  />
+                                </svg>
+                              </a>
+                            ) : (
+                              <span className="text-gray-400 text-sm font-medium cursor-not-allowed">
+                                Submission Link (Coming Soon)
+                              </span>
+                            )}
                           </div>
                         )}
                     </div>
