@@ -7,8 +7,17 @@ import Image from "next/image";
 export default function Contact() {
   const generalChairs = [
     {
-      name: "Dr. Shashank Shetty",
+      name: "Dr. Niranjan N Chiplunkar",
       title: "General Chair",
+      department: "Principal",
+      institution: "NMAM Institute of Technology, Nitte",
+      email: "principal_nmamit@nitte.edu.in",
+      image:
+        "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665152/niranjan_Large_snbysb.jpg",
+    },
+    {
+      name: "Dr. Shashank Shetty",
+      title: "General Co-Chair",
       department: "Associate Professor, Dept. of CSE",
       institution: "NMAM Institute of Technology, Nitte",
       email: "shashankshetty@nitte.edu.in",
@@ -17,7 +26,7 @@ export default function Contact() {
     },
     {
       name: "Dr. Mangala Shetty",
-      title: "General Chair",
+      title: "General Co-Chair",
       department: "Associate Professor, Dept. of MCA",
       institution: "NMAM Institute of Technology, Nitte",
       email: "mangalapshetty@nitte.edu.in",
@@ -26,7 +35,7 @@ export default function Contact() {
     },
     {
       name: "Dr. N S S RAMAKRISHNA",
-      title: "General Chair",
+      title: "General Co-Chair",
       department: "Associate Professor, Dept. of EEE",
       institution: "NMAM Institute of Technology, Nitte",
       email: "ramakrishna.n@nitte.edu.in",
