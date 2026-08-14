@@ -111,6 +111,12 @@ const financeChairs = [
 
 const executiveCommittee = [
   {
+    name: "Dr. Niranjan N Chiplunkar",
+    title: "Principal, NMAM Institute of Technology, Nitte",
+    image:
+      "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665152/niranjan_Large_snbysb.jpg",
+  },
+  {
     name: "Dr. Nagesh Prabhu",
     title: "Vice Principal",
     image: "https://nitte.edu.in/admin/photo/3/faculty/6/2231.jpg",
