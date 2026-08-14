@@ -260,6 +260,56 @@ const Navbar = () => {
               </Link>
             ),
           )}
+
+          {/* Year Dropdown Selector */}
+          <div
+            className="relative group ml-1"
+            onMouseEnter={() => setDropdownOpen("YearSelector")}
+            onMouseLeave={() => setDropdownOpen(null)}
+          >
+            <button
+              className="flex items-center space-x-1.5 py-2 px-3 rounded-lg border border-blue-200 bg-blue-50/80 text-blue-700 hover:bg-blue-100 hover:text-blue-800 transition-all duration-200 shadow-sm"
+            >
+              <span className="font-semibold">{is2026 ? "2026" : "2027"}</span>
+              <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${dropdownOpen === "YearSelector" ? "rotate-180" : ""}`} />
+            </button>
+
+            <div
+              className={`absolute top-full right-0 mt-2 w-48 bg-white rounded-xl shadow-xl border border-gray-100 py-2 transition-all duration-200 ${dropdownOpen === "YearSelector"
+                ? "opacity-100 visible translate-y-0"
+                : "opacity-0 invisible translate-y-2"
+                }`}
+            >
+              <Link
+                href="/2027"
+                className={`block px-4 py-2.5 text-sm transition-colors ${!is2026 && pathname !== "/2026/proceedings"
+                  ? "text-blue-600 bg-blue-50 font-semibold"
+                  : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                  }`}
+              >
+                2027 Edition
+              </Link>
+              <Link
+                href="/2026"
+                className={`block px-4 py-2.5 text-sm transition-colors ${is2026 && pathname !== "/2026/proceedings"
+                  ? "text-blue-600 bg-blue-50 font-semibold"
+                  : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                  }`}
+              >
+                2026 Edition
+              </Link>
+              <div className="my-1 border-t border-gray-100"></div>
+              <Link
+                href="/2026/proceedings"
+                className={`block px-4 py-2.5 text-sm transition-colors ${pathname === "/2026/proceedings"
+                  ? "text-blue-600 bg-blue-50 font-semibold"
+                  : "text-gray-700 hover:text-blue-600 hover:bg-gray-50 font-medium"
+                  }`}
+              >
+                2026 Proceedings
+              </Link>
+            </div>
+          </div>
         </div>
 
         <button
@@ -350,6 +400,43 @@ const Navbar = () => {
                 </Link>
               ),
             )}
+
+            {/* Mobile Year Selector */}
+            <div className="border-t border-gray-100 pt-3 mt-3 px-4">
+              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Conference Edition</p>
+              <div className="space-y-1">
+                <Link
+                  href="/2027"
+                  className={`block py-2.5 px-3 rounded-lg text-sm transition-colors ${!is2026 && pathname !== "/2026/proceedings"
+                    ? "text-blue-600 bg-blue-50 font-semibold"
+                    : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                    }`}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  2027 Edition
+                </Link>
+                <Link
+                  href="/2026"
+                  className={`block py-2.5 px-3 rounded-lg text-sm transition-colors ${is2026 && pathname !== "/2026/proceedings"
+                    ? "text-blue-600 bg-blue-50 font-semibold"
+                    : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                    }`}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  2026 Edition
+                </Link>
+                <Link
+                  href="/2026/proceedings"
+                  className={`block py-2.5 px-3 rounded-lg text-sm transition-colors ${pathname === "/2026/proceedings"
+                    ? "text-blue-600 bg-blue-50 font-semibold"
+                    : "text-gray-700 hover:text-blue-600 hover:bg-gray-50 font-medium"
+                    }`}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  2026 Proceedings
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       )}
