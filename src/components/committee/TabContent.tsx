@@ -387,18 +387,18 @@ export default function TabContent({ tabId }: TabContentProps) {
             <div>
               <div className="text-center mb-8">
                 <h3 className="text-xl font-display font-bold text-gray-900 mb-2">
-                  Finance Chair
+                  {financeChairs.length > 1 ? "Finance Chairs" : "Finance Chair"}
                 </h3>
                 <p className="text-gray-600">
                   Financial management and budget oversight
                 </p>
               </div>
 
-              <div className="flex justify-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                 {financeChairs.map((chair: CommitteeMember, index: number) => (
                   <div
                     key={index}
-                    className="bg-emerald-50/60 rounded-2xl p-6 border border-emerald-100 shadow-sm text-center max-w-md w-full"
+                    className="bg-emerald-50/60 rounded-2xl p-6 border border-emerald-100 shadow-sm text-center max-w-md w-full mx-auto"
                   >
                     {chair.image && (
                       <Image

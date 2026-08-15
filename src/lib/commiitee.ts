@@ -88,24 +88,18 @@ const technicalProgramCoChairs = [
   },
 ];
 
-const publicationChairs = [
-  {
-    name: "Dr. Shabari Shedthi B",
-    title: "Associate Professor, Dept. of CSE, NMAMIT, Nitte",
-    image: "https://nitte.edu.in/admin/photo/3/faculty/5/79.jpg",
-  },
-  {
-    name: "Ms. Ankitha A. Nayak",
-    title: "Assistant Professor Gd. III, Dept. of CSE, NMAMIT, Nitte",
-    image: "https://nitte.edu.in/admin/photo/3/faculty/5/91.jpg",
-  },
-];
+const publicationChairs: { name: string; title: string; image?: string }[] = [];
 
 const financeChairs = [
   {
     name: "Dr. Puneeth R. P.",
     title: "Assistant Professor Gd. III, Dept. of CSE, NMAMIT, Nitte",
     image: "https://nitte.edu.in/admin/photo/3/faculty/5/81.jpg",
+  },
+  {
+    name: "Ms. Ankitha A. Nayak",
+    title: "Assistant Professor Gd. III, Dept. of CSE, NMAMIT, Nitte",
+    image: "https://nitte.edu.in/admin/photo/3/faculty/5/91.jpg",
   },
 ];
 
