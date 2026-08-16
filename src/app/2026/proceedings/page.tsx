@@ -12,7 +12,7 @@ import {
 
 export default function Proceedings2026() {
   return (
-    <div className="pt-16 min-h-screen bg-gray-50/50">
+    <div className="pt-24 md:pt-28 min-h-screen bg-gray-50/50">
       {/* Hero Header Section */}
       <section className="relative py-16 md:py-20 overflow-hidden px-5">
         <div className="absolute inset-0 z-0">

@@ -173,8 +173,40 @@ const Navbar = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white ${scrolled ? "glass-effect shadow-lg" : "shadow-none"
         }`}
     >
-      <div className="flex justify-between items-center p-4">
-        <Link href={getLinkHref("/")} className="flex items-center md:gap-2 gap-1">
+      {/* 2026 Proceedings Top Announcement Marquee - Only in 2026 */}
+      {is2026 && (
+        <div className="bg-gradient-to-r from-blue-950 via-indigo-900 to-blue-950 text-white overflow-hidden border-b border-blue-800/40 relative z-50 shadow-sm">
+          <Link href="/2026/proceedings" className="block py-2 group cursor-pointer">
+            <div className="animate-marquee space-x-12 items-center">
+              <div className="flex items-center space-x-3 whitespace-nowrap">
+                <span className="bg-yellow-400 text-blue-950 font-bold px-2 py-0.5 rounded text-[10px] uppercase tracking-wider shadow-sm">
+                  2026 Proceedings
+                </span>
+                <span className="font-medium text-blue-100 text-xs md:text-sm">
+                  🎉 IC-AISIS 2026 Proceedings Published! Presented papers are available online in Grenze Publication. Scopus Indexing expected end of November.
+                </span>
+                <span className="font-semibold text-yellow-300 underline underline-offset-2 ml-1 text-xs md:text-sm group-hover:text-white transition-colors">
+                  View 2026 Proceedings &rarr;
+                </span>
+              </div>
+              <div className="flex items-center space-x-3 whitespace-nowrap">
+                <span className="bg-yellow-400 text-blue-950 font-bold px-2 py-0.5 rounded text-[10px] uppercase tracking-wider shadow-sm">
+                  2026 Proceedings
+                </span>
+                <span className="font-medium text-blue-100 text-xs md:text-sm">
+                  🎉 IC-AISIS 2026 Proceedings Published! Presented papers are available online in Grenze Publication. Scopus Indexing expected end of November.
+                </span>
+                <span className="font-semibold text-yellow-300 underline underline-offset-2 ml-1 text-xs md:text-sm group-hover:text-white transition-colors">
+                  View 2026 Proceedings &rarr;
+                </span>
+              </div>
+            </div>
+          </Link>
+        </div>
+      )}
+
+      <div className="flex justify-between items-center px-4 md:px-8 py-3.5">
+        <Link href={getLinkHref("/")} className="flex items-center md:gap-3 gap-2">
           <Image
             src={is2026 ? "/2026/nitteLogo.png" : "/2027/nitteLogo.png"}
             alt="Nitte Logo"
@@ -182,12 +214,12 @@ const Navbar = () => {
             height={100}
             className="md:w-56 w-40 h-6 md:h-8"
           />
-          <div className="flex items-center border-l-2 md:ml-2 md:pl-4 ml-1 pl-2">
+          <div className="flex items-center border-l-2 md:ml-3 md:pl-4 ml-2 pl-3 border-gray-200">
             <Image src={is2026 ? "/2026/logo.png" : "/2027/logo.jpg"} alt="Logo" width={100} height={100} />
           </div>
         </Link>
 
-        <div className="hidden xl:flex items-center gap-2">
+        <div className="hidden xl:flex items-center gap-3">
           {navLinks.map((link, index) =>
             "dropdown" in link ? (
               <div
@@ -197,7 +229,7 @@ const Navbar = () => {
                 onMouseLeave={() => setDropdownOpen(null)}
               >
                 <button
-                  className={`flex items-center space-x-1 py-2 px-3 rounded-lg transition-all duration-200 ${(link.label === "About" && isAnyAboutTabActive()) ||
+                  className={`flex items-center space-x-1 py-2 px-3.5 rounded-lg transition-all duration-200 ${(link.label === "About" && isAnyAboutTabActive()) ||
                     (link.label === "Committees" &&
                       isAnyCommitteesTabActive()) ||
                     (link.label === "Call for Papers" &&

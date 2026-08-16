@@ -12,8 +12,8 @@ interface PageLoaderProps {
 const PageLoader = ({ onComplete }: PageLoaderProps) => {
   const pathname = usePathname() || "";
   const is2026 = pathname.includes("/2026");
-  const [isLoading, setIsLoading] = useState(false);
   const { shouldShowLoader, markHomeAsVisited } = useLoaderStore();
+  const [isLoading, setIsLoading] = useState(() => shouldShowLoader());
 
   useEffect(() => {
     const showLoader = shouldShowLoader();
@@ -28,6 +28,7 @@ const PageLoader = ({ onComplete }: PageLoaderProps) => {
 
       return () => clearTimeout(timer);
     } else {
+      setIsLoading(false);
       onComplete?.();
     }
   }, [shouldShowLoader, markHomeAsVisited, onComplete]);

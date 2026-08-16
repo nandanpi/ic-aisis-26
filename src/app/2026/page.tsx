@@ -38,7 +38,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-br from-transparent via-blue-600/10 to-transparent"></div>
           </div>
 
-          <div className="relative z-10 mx-5 pt-24 pb-16">
+          <div className="relative z-10 mx-5 pt-28 md:pt-32 pb-16">
             <div className="max-w-5xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div className="lg:col-span-7 text-white">
