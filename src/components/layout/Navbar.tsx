@@ -200,9 +200,7 @@ const Navbar = () => {
                 className="flex items-center space-x-12 shrink-0 min-w-full"
               >
                 <div className="flex items-center space-x-3 whitespace-nowrap">
-                  <span className="bg-amber-400 text-slate-950 font-extrabold px-2.5 py-0.5 rounded-full text-[11px] uppercase tracking-wider shadow-sm">
-                    📢 Announcement
-                  </span>
+                  
                   <span className="font-semibold text-blue-50 text-xs md:text-sm tracking-wide">
                     IC-AISIS 2026 Proceedings are now published in <strong className="text-yellow-300">Grenze Publication</strong>! Scopus Indexing expected end of November.
                   </span>
@@ -211,9 +209,7 @@ const Navbar = () => {
                   </span>
                 </div>
                 <div className="flex items-center space-x-3 whitespace-nowrap">
-                  <span className="bg-amber-400 text-slate-950 font-extrabold px-2.5 py-0.5 rounded-full text-[11px] uppercase tracking-wider shadow-sm">
-                    📢 Announcement
-                  </span>
+                 
                   <span className="font-semibold text-blue-50 text-xs md:text-sm tracking-wide">
                     IC-AISIS 2026 Proceedings are now published in <strong className="text-yellow-300">Grenze Publication</strong>! Scopus Indexing expected end of November.
                   </span>
