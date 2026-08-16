@@ -5,14 +5,26 @@ import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
-  const pathname = usePathname();
+  const pathname = usePathname() || "";
   const searchParams = useSearchParams();
-  const is2026 = pathname.includes("/2026");
+  
+  const [is2026, setIs2026] = useState<boolean>(() => {
+    if (typeof window !== "undefined") {
+      return window.location.pathname.includes("2026");
+    }
+    return pathname.includes("2026");
+  });
+
+  useEffect(() => {
+    const currentPath = pathname || (typeof window !== "undefined" ? window.location.pathname : "");
+    setIs2026(currentPath.includes("2026"));
+  }, [pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -175,31 +187,41 @@ const Navbar = () => {
     >
       {/* 2026 Proceedings Top Announcement Marquee - Only in 2026 */}
       {is2026 && (
-        <div className="bg-gradient-to-r from-blue-950 via-indigo-900 to-blue-950 text-white overflow-hidden border-b border-blue-800/40 relative z-50 shadow-sm">
-          <Link href="/2026/proceedings" className="block py-2 group cursor-pointer">
-            <div className="animate-marquee space-x-12 items-center">
-              <div className="flex items-center space-x-3 whitespace-nowrap">
-                <span className="bg-yellow-400 text-blue-950 font-bold px-2 py-0.5 rounded text-[10px] uppercase tracking-wider shadow-sm">
-                  2026 Proceedings
-                </span>
-                <span className="font-medium text-blue-100 text-xs md:text-sm">
-                  🎉 IC-AISIS 2026 Proceedings Published! Presented papers are available online in Grenze Publication. Scopus Indexing expected end of November.
-                </span>
-                <span className="font-semibold text-yellow-300 underline underline-offset-2 ml-1 text-xs md:text-sm group-hover:text-white transition-colors">
-                  View 2026 Proceedings &rarr;
-                </span>
-              </div>
-              <div className="flex items-center space-x-3 whitespace-nowrap">
-                <span className="bg-yellow-400 text-blue-950 font-bold px-2 py-0.5 rounded text-[10px] uppercase tracking-wider shadow-sm">
-                  2026 Proceedings
-                </span>
-                <span className="font-medium text-blue-100 text-xs md:text-sm">
-                  🎉 IC-AISIS 2026 Proceedings Published! Presented papers are available online in Grenze Publication. Scopus Indexing expected end of November.
-                </span>
-                <span className="font-semibold text-yellow-300 underline underline-offset-2 ml-1 text-xs md:text-sm group-hover:text-white transition-colors">
-                  View 2026 Proceedings &rarr;
-                </span>
-              </div>
+        <div className="w-full bg-gradient-to-r from-blue-950 via-indigo-900 to-blue-950 text-white overflow-hidden border-b border-blue-700/50 py-2 relative z-50 shadow-md">
+          <Link href="/2026/proceedings" className="block w-full cursor-pointer group">
+            <div className="flex overflow-hidden select-none">
+              <motion.div
+                animate={{ x: ["0%", "-50%"] }}
+                transition={{
+                  repeat: Number.POSITIVE_INFINITY,
+                  ease: "linear",
+                  duration: 25,
+                }}
+                className="flex items-center space-x-12 shrink-0 min-w-full"
+              >
+                <div className="flex items-center space-x-3 whitespace-nowrap">
+                  <span className="bg-amber-400 text-slate-950 font-extrabold px-2.5 py-0.5 rounded-full text-[11px] uppercase tracking-wider shadow-sm">
+                    📢 Announcement
+                  </span>
+                  <span className="font-semibold text-blue-50 text-xs md:text-sm tracking-wide">
+                    IC-AISIS 2026 Proceedings are now published in <strong className="text-yellow-300">Grenze Publication</strong>! Scopus Indexing expected end of November.
+                  </span>
+                  <span className="bg-blue-600/80 group-hover:bg-blue-500 text-white px-3 py-0.5 rounded-md text-xs font-semibold shadow transition-all duration-200 inline-flex items-center ml-2 border border-blue-400/30">
+                    View 2026 Proceedings &rarr;
+                  </span>
+                </div>
+                <div className="flex items-center space-x-3 whitespace-nowrap">
+                  <span className="bg-amber-400 text-slate-950 font-extrabold px-2.5 py-0.5 rounded-full text-[11px] uppercase tracking-wider shadow-sm">
+                    📢 Announcement
+                  </span>
+                  <span className="font-semibold text-blue-50 text-xs md:text-sm tracking-wide">
+                    IC-AISIS 2026 Proceedings are now published in <strong className="text-yellow-300">Grenze Publication</strong>! Scopus Indexing expected end of November.
+                  </span>
+                  <span className="bg-blue-600/80 group-hover:bg-blue-500 text-white px-3 py-0.5 rounded-md text-xs font-semibold shadow transition-all duration-200 inline-flex items-center ml-2 border border-blue-400/30">
+                    View 2026 Proceedings &rarr;
+                  </span>
+                </div>
+              </motion.div>
             </div>
           </Link>
         </div>
