@@ -75,7 +75,9 @@ const generalCoChairs = [
   },
 ];
  
-const technicalProgramCoChairs = [
+const technicalProgramCoChairs: { name: string; title: string; image?: string }[] = [];
+
+const publicationChairs = [
   {
     name: "Dr. Parameshachari B. D.",
     title:
@@ -84,27 +86,25 @@ const technicalProgramCoChairs = [
   },
   {
     name: "Dr. Vasudev Acharya",
-    title: "Professor, Dept of ISE, NMAMIT",
+    title: "Professor, Dept. of ISE, NMAMIT, Nitte",
     image: "https://nitte.edu.in/admin/photo/3/faculty/8/2268.jpg",
   },
   {
     name: "Dr. Veeresh Gonal",
     title:
-      "Associate Professor Department of E & E Engineering at BLDEA's V.P.Dr.P.G.Halakatti College of Engineering and Technology Vijayapur",
+      "Associate Professor, Dept. of E & E Engineering, BLDEACET, Vijayapur",
   },
   {
     name: "Dr. Shashidhar R.",
     title:
-      "Associate Professor Dept. of E & C Engineering at JSS Science and Technology University",
+      "Associate Professor, Dept. of E & C Engineering, JSS Science and Technology University",
   },
   {
     name: "Prabhavathi P",
     title:
-      "Associate professor, Department of Electronics & Communication, B N M Institute of Technology",
+      "Associate Professor, Dept. of Electronics & Communication, BNM Institute of Technology",
   },
 ];
-
-const publicationChairs: { name: string; title: string; image?: string }[] = [];
 
 const financeChairs = [
   {

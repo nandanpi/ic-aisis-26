@@ -62,7 +62,7 @@ const MemberAvatar = ({
   }
   return (
     <div
-      className={`${sizeClass} rounded-full bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center text-white font-bold mx-auto mb-4 ${borderClass}`}
+      className={`${sizeClass} rounded-full bg-gradient-to-br from-[#0B2545] to-[#134074] flex items-center justify-center text-white font-bold mx-auto mb-4 ${borderClass}`}
     >
       {getInitials(name)}
     </div>
@@ -468,10 +468,10 @@ export default function TabContent({ tabId }: TabContentProps) {
               <Award className="w-8 h-8 text-blue-600" />
             </div>
             <h3 className="text-2xl font-display font-bold text-gray-900 mb-2">
-              Technical & Publication Chairs
+              Publication Chairs
             </h3>
             <p className="text-gray-600">
-              Technical program oversight, review management, and proceedings publication
+              Proceedings publication management and review oversight
             </p>
           </div>
 

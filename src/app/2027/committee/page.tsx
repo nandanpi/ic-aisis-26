@@ -41,10 +41,10 @@ export default function Committees() {
       content: <TabContent tabId="chairs" />,
     },
     {
-      id: "technical-pub",
-      label: "Technical & Publication Chairs",
+      id: "publication",
+      label: "Publication Chairs",
       icon: <Award className="w-4 h-4" />,
-      content: <TabContent tabId="technical-pub" />,
+      content: <TabContent tabId="publication" />,
     },
     {
       id: "finance",
