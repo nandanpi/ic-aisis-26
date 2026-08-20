@@ -304,80 +304,181 @@ export default function TabContent({ tabId }: TabContentProps) {
             </div>
           )}
 
-          {/* Technical Program Co-Chairs */}
-          {technicalProgramCoChairs.length > 0 && (
-            <div>
-              <div className="text-center mb-8">
-                <h3 className="text-xl font-display font-bold text-gray-900 mb-2">
-                  Technical Program Co-Chairs
-                </h3>
-                <p className="text-gray-600">
-                  Technical program oversight and paper selection
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                {technicalProgramCoChairs.map((chair: CommitteeMember, index: number) => (
-                  <div
-                    key={index}
-                    className="bg-blue-50/60 rounded-2xl p-6 border border-blue-100 shadow-sm text-center"
-                  >
-                    {chair.image && (
-                      <Image
-                        width={90}
-                        height={90}
-                        src={chair.image}
-                        alt={chair.name}
-                        className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-2 border-blue-200 shadow-xs"
-                      />
-                    )}
-                    <h4 className="text-lg font-bold text-gray-900 mb-1">
-                      {chair.name}
-                    </h4>
-                    <p className="text-blue-700 text-sm font-medium">
-                      {chair.title}
+          {/* For 2026, render remaining chairs directly in chairs tab */}
+          {is2026 && (
+            <>
+              {/* Technical Program Co-Chairs */}
+              {technicalProgramCoChairs.length > 0 && (
+                <div>
+                  <div className="text-center mb-8">
+                    <h3 className="text-xl font-display font-bold text-gray-900 mb-2">
+                      Technical Program Co-Chairs
+                    </h3>
+                    <p className="text-gray-600">
+                      Technical program oversight and paper selection
                     </p>
                   </div>
-                ))}
-              </div>
-            </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    {technicalProgramCoChairs.map(
+                      (chair: CommitteeMember, index: number) => (
+                        <div
+                          key={index}
+                          className="bg-blue-50/60 rounded-2xl p-6 border border-blue-100 shadow-sm text-center"
+                        >
+                          {chair.image && (
+                            <Image
+                              width={90}
+                              height={90}
+                              src={chair.image}
+                              alt={chair.name}
+                              className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-2 border-blue-200 shadow-xs"
+                            />
+                          )}
+                          <h4 className="text-lg font-bold text-gray-900 mb-1">
+                            {chair.name}
+                          </h4>
+                          <p className="text-blue-700 text-sm font-medium">
+                            {chair.title}
+                          </p>
+                        </div>
+                      )
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {/* Publication Chairs */}
+              {publicationChairs.length > 0 && (
+                <div>
+                  <div className="text-center mb-8">
+                    <h3 className="text-xl font-display font-bold text-gray-900 mb-2">
+                      Publication Chairs
+                    </h3>
+                    <p className="text-gray-600">
+                      Proceedings publication management and publisher liaison
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    {publicationChairs.map(
+                      (chair: CommitteeMember, index: number) => (
+                        <div
+                          key={index}
+                          className="bg-purple-50/60 rounded-2xl p-6 border border-purple-100 shadow-sm text-center"
+                        >
+                          {chair.image && (
+                            <Image
+                              width={90}
+                              height={90}
+                              src={chair.image}
+                              alt={chair.name}
+                              className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-2 border-purple-200 shadow-xs"
+                            />
+                          )}
+                          <h4 className="text-lg font-bold text-gray-900 mb-1">
+                            {chair.name}
+                          </h4>
+                          <p className="text-purple-700 text-sm font-medium">
+                            {chair.title}
+                          </p>
+                        </div>
+                      )
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {/* Finance Chair */}
+              {financeChairs.length > 0 && (
+                <div>
+                  <div className="text-center mb-8">
+                    <h3 className="text-xl font-display font-bold text-gray-900 mb-2">
+                      {financeChairs.length > 1
+                        ? "Finance Chairs"
+                        : "Finance Chair"}
+                    </h3>
+                    <p className="text-gray-600">
+                      Financial management and budget oversight
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    {financeChairs.map(
+                      (chair: CommitteeMember, index: number) => (
+                        <div
+                          key={index}
+                          className="bg-emerald-50/60 rounded-2xl p-6 border border-emerald-100 shadow-sm text-center max-w-md w-full mx-auto"
+                        >
+                          {chair.image && (
+                            <Image
+                              width={90}
+                              height={90}
+                              src={chair.image}
+                              alt={chair.name}
+                              className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-2 border-emerald-200 shadow-xs"
+                            />
+                          )}
+                          <h4 className="text-lg font-bold text-gray-900 mb-1">
+                            {chair.name}
+                          </h4>
+                          <p className="text-emerald-700 text-sm font-medium">
+                            {chair.title}
+                          </p>
+                        </div>
+                      )
+                    )}
+                  </div>
+                </div>
+              )}
+            </>
           )}
+        </div>
+      );
 
-          {/* Publication Chairs */}
-          {publicationChairs.length > 0 && (
+    case "others":
+      return (
+        <div className="space-y-16">
+          {/* Technical and Publication Chair */}
+          {(technicalProgramCoChairs.length > 0 || publicationChairs.length > 0) && (
             <div>
               <div className="text-center mb-8">
-                <h3 className="text-xl font-display font-bold text-gray-900 mb-2">
-                  Publication Chairs
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-2xl font-display font-bold text-gray-900 mb-2">
+                  Technical and Publication Chair
                 </h3>
                 <p className="text-gray-600">
-                  Proceedings publication management and publisher liaison
+                  Technical program oversight, review management, and proceedings publication
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                {publicationChairs.map((chair: CommitteeMember, index: number) => (
-                  <div
-                    key={index}
-                    className="bg-purple-50/60 rounded-2xl p-6 border border-purple-100 shadow-sm text-center"
-                  >
-                    {chair.image && (
-                      <Image
-                        width={90}
-                        height={90}
-                        src={chair.image}
-                        alt={chair.name}
-                        className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-2 border-purple-200 shadow-xs"
-                      />
-                    )}
-                    <h4 className="text-lg font-bold text-gray-900 mb-1">
-                      {chair.name}
-                    </h4>
-                    <p className="text-purple-700 text-sm font-medium">
-                      {chair.title}
-                    </p>
-                  </div>
-                ))}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                {[...technicalProgramCoChairs, ...publicationChairs].map(
+                  (chair: CommitteeMember, index: number) => (
+                    <div
+                      key={index}
+                      className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow text-center flex flex-col items-center justify-between"
+                    >
+                      <div>
+                        <Image
+                          width={90}
+                          height={90}
+                          src={chair.image || "/placeholder.svg"}
+                          alt={chair.name}
+                          className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-2 border-blue-100 shadow-xs"
+                        />
+                        <h4 className="text-lg font-bold text-gray-900 mb-2">
+                          {chair.name}
+                        </h4>
+                        <p className="text-gray-600 text-sm leading-relaxed">
+                          {chair.title}
+                        </p>
+                      </div>
+                    </div>
+                  )
+                )}
               </div>
             </div>
           )}
@@ -386,7 +487,10 @@ export default function TabContent({ tabId }: TabContentProps) {
           {financeChairs.length > 0 && (
             <div>
               <div className="text-center mb-8">
-                <h3 className="text-xl font-display font-bold text-gray-900 mb-2">
+                <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Briefcase className="w-8 h-8 text-emerald-600" />
+                </div>
+                <h3 className="text-2xl font-display font-bold text-gray-900 mb-2">
                   {financeChairs.length > 1 ? "Finance Chairs" : "Finance Chair"}
                 </h3>
                 <p className="text-gray-600">
@@ -394,27 +498,27 @@ export default function TabContent({ tabId }: TabContentProps) {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
                 {financeChairs.map((chair: CommitteeMember, index: number) => (
                   <div
                     key={index}
-                    className="bg-emerald-50/60 rounded-2xl p-6 border border-emerald-100 shadow-sm text-center max-w-md w-full mx-auto"
+                    className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow text-center flex flex-col items-center justify-between"
                   >
-                    {chair.image && (
+                    <div>
                       <Image
                         width={90}
                         height={90}
-                        src={chair.image}
+                        src={chair.image || "/placeholder.svg"}
                         alt={chair.name}
-                        className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-2 border-emerald-200 shadow-xs"
+                        className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-2 border-emerald-100 shadow-xs"
                       />
-                    )}
-                    <h4 className="text-lg font-bold text-gray-900 mb-1">
-                      {chair.name}
-                    </h4>
-                    <p className="text-emerald-700 text-sm font-medium">
-                      {chair.title}
-                    </p>
+                      <h4 className="text-lg font-bold text-gray-900 mb-2">
+                        {chair.name}
+                      </h4>
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        {chair.title}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>

@@ -74,17 +74,33 @@ const generalCoChairs = [
     image: "https://nitte.edu.in/admin/photo/3/faculty/6/2811.jpg",
   },
 ];
-
+ 
 const technicalProgramCoChairs = [
   {
     name: "Dr. Parameshachari B. D.",
-    title: "Professor & HoD, Dept. of ECE, NMIT, Bengaluru",
+    title:
+      "Professor & Head, Dept. of ECE, Nitte Meenakshi Institute of Technology, Bengaluru",
     image: "https://nitte.edu.in/nmit/admin/photo/7/faculty/17/518.jpg",
   },
   {
-    name: "Dr. Vasudeva",
-    title: "Professor, Dept. of ISE, NMAMIT, Nitte",
+    name: "Dr. Vasudev Acharya",
+    title: "Professor, Dept of ISE, NMAMIT",
     image: "https://nitte.edu.in/admin/photo/3/faculty/8/2268.jpg",
+  },
+  {
+    name: "Dr. Veeresh Gonal",
+    title:
+      "Associate Professor Department of E & E Engineering at BLDEA's V.P.Dr.P.G.Halakatti College of Engineering and Technology Vijayapur",
+  },
+  {
+    name: "Dr. Shashidhar R.",
+    title:
+      "Associate Professor Dept. of E & C Engineering at JSS Science and Technology University",
+  },
+  {
+    name: "Prabhavathi P",
+    title:
+      "Associate professor, Department of Electronics & Communication, B N M Institute of Technology",
   },
 ];
 
@@ -92,14 +108,16 @@ const publicationChairs: { name: string; title: string; image?: string }[] = [];
 
 const financeChairs = [
   {
-    name: "Dr. Puneeth R. P.",
-    title: "Assistant Professor Gd. III, Dept. of CSE, NMAMIT, Nitte",
-    image: "https://nitte.edu.in/admin/photo/3/faculty/5/81.jpg",
+    name: "Dr. Shashank Shetty",
+    title: "Associate Professor, Department of CSE, NMAMIT, Nitte",
+    image:
+      "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665153/shashankShetty_Large_rurgwa.jpg",
   },
   {
-    name: "Ms. Ankitha A. Nayak",
-    title: "Assistant Professor Gd. III, Dept. of CSE, NMAMIT, Nitte",
-    image: "https://nitte.edu.in/admin/photo/3/faculty/5/91.jpg",
+    name: "Dr. Vijeesh V",
+    title: "Associate Director R&D, Nitte Off Campus Centre",
+    image:
+      "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665153/vijeesh_Large_yfwxij.jpg",
   },
 ];
 
