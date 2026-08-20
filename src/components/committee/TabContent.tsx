@@ -25,6 +25,50 @@ interface CommitteeMember {
   position?: string;
 }
 
+const getInitials = (name: string) => {
+  const cleanName = name
+    .replace(
+      /^(Dr\.|Prof\.|Ms\.|Mr\.|Sri\.|Mrs\.|Associate Prof\.|Assistant Prof\.|Prof\.\s*\(Dr\.\))\s*/gi,
+      ""
+    )
+    .trim();
+  const parts = cleanName.split(/\s+/).filter(Boolean);
+  if (parts.length === 0) return "?";
+  if (parts.length === 1) return parts[0][0].toUpperCase();
+  return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+};
+
+const MemberAvatar = ({
+  image,
+  name,
+  sizeClass = "w-24 h-24 text-2xl",
+  borderClass = "border-4 border-gray-100 shadow-sm",
+}: {
+  image?: string;
+  name: string;
+  sizeClass?: string;
+  borderClass?: string;
+}) => {
+  if (image) {
+    return (
+      <Image
+        width={100}
+        height={100}
+        src={image}
+        alt={name}
+        className={`${sizeClass} rounded-full object-cover mx-auto mb-4 ${borderClass}`}
+      />
+    );
+  }
+  return (
+    <div
+      className={`${sizeClass} rounded-full bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center text-white font-bold mx-auto mb-4 ${borderClass}`}
+    >
+      {getInitials(name)}
+    </div>
+  );
+};
+
 export default function TabContent({ tabId }: TabContentProps) {
   const pathname = usePathname() || "";
   const is2026 = pathname.includes("/2026");
@@ -93,12 +137,11 @@ export default function TabContent({ tabId }: TabContentProps) {
                   className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 border border-purple-200"
                 >
                   <div className="flex flex-col items-center text-center">
-                    <Image
-                      width={100}
-                      height={100}
-                      src={p.image || "/placeholder.svg"}
-                      alt={p.name}
-                      className="w-32 h-32 rounded-full object-cover mb-6 border-4 border-white shadow-lg"
+                    <MemberAvatar
+                      image={p.image}
+                      name={p.name}
+                      sizeClass="w-32 h-32 text-3xl"
+                      borderClass="border-4 border-white shadow-lg"
                     />
                     <h4 className="text-2xl font-bold text-gray-900 mb-2">
                       {p.name}
@@ -127,25 +170,23 @@ export default function TabContent({ tabId }: TabContentProps) {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {steeringCommittee.map((member: CommitteeMember, index: number) => (
-                  <div
-                    key={index}
-                    className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow text-center"
-                  >
-                    <Image
-                      width={100}
-                      height={100}
-                      src={member.image || "/placeholder.svg"}
-                      alt={member.name}
-                      className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-4 border-gray-100"
-                    />
-                    <h4 className="text-lg font-bold text-gray-900 mb-2">
-                      {member.name}
-                    </h4>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      {member.title}
-                    </p>
-                  </div>
-                ))}
+                <div
+                  key={index}
+                  className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow text-center"
+                >
+                  <MemberAvatar
+                    image={member.image}
+                    name={member.name}
+                    sizeClass="w-24 h-24 text-2xl"
+                  />
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">
+                    {member.name}
+                  </h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {member.title}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -168,12 +209,10 @@ export default function TabContent({ tabId }: TabContentProps) {
                   key={index}
                   className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow text-center"
                 >
-                  <Image
-                    width={100}
-                    height={100}
-                    src={member.image || "/placeholder.svg"}
-                    alt={member.name}
-                    className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-4 border-gray-100"
+                  <MemberAvatar
+                    image={member.image}
+                    name={member.name}
+                    sizeClass="w-24 h-24 text-2xl"
                   />
                   <h4 className="text-lg font-bold text-gray-900 mb-2">
                     {member.name}
@@ -212,12 +251,11 @@ export default function TabContent({ tabId }: TabContentProps) {
                     key={index}
                     className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 shadow-lg border border-amber-200 hover:shadow-xl transition-shadow text-center max-w-xl w-full"
                   >
-                    <Image
-                      width={100}
-                      height={100}
-                      src={chair.image || "/placeholder.svg"}
-                      alt={chair.name}
-                      className="w-32 h-32 rounded-full object-cover mx-auto mb-6 border-4 border-white shadow-md"
+                    <MemberAvatar
+                      image={chair.image}
+                      name={chair.name}
+                      sizeClass="w-32 h-32 text-3xl"
+                      borderClass="border-4 border-white shadow-md"
                     />
                     <h4 className="text-xl font-bold text-gray-900 mb-2">
                       {chair.name}
@@ -251,12 +289,11 @@ export default function TabContent({ tabId }: TabContentProps) {
                   key={index}
                   className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow text-center max-w-xl w-full"
                 >
-                  <Image
-                    width={100}
-                    height={100}
-                    src={chair.image || "/placeholder.svg"}
-                    alt={chair.name}
-                    className="w-32 h-32 rounded-full object-cover mx-auto mb-6 border-4 border-gray-100 shadow-md"
+                  <MemberAvatar
+                    image={chair.image}
+                    name={chair.name}
+                    sizeClass="w-32 h-32 text-3xl"
+                    borderClass="border-4 border-gray-100 shadow-md"
                   />
                   <h4 className="text-xl font-bold text-gray-900 mb-2">
                     {chair.name}
@@ -285,12 +322,10 @@ export default function TabContent({ tabId }: TabContentProps) {
                     key={index}
                     className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow text-center"
                   >
-                    <Image
-                      width={100}
-                      height={100}
-                      src={chair.image || "/placeholder.svg"}
-                      alt={chair.name}
-                      className="w-28 h-28 rounded-full object-cover mx-auto mb-6 border-4 border-gray-100 shadow-sm"
+                    <MemberAvatar
+                      image={chair.image}
+                      name={chair.name}
+                      sizeClass="w-28 h-28 text-2xl"
                     />
                     <h4 className="text-lg font-bold text-gray-900 mb-2">
                       {chair.name}
@@ -326,15 +361,11 @@ export default function TabContent({ tabId }: TabContentProps) {
                           key={index}
                           className="bg-blue-50/60 rounded-2xl p-6 border border-blue-100 shadow-sm text-center"
                         >
-                          {chair.image && (
-                            <Image
-                              width={90}
-                              height={90}
-                              src={chair.image}
-                              alt={chair.name}
-                              className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-2 border-blue-200 shadow-xs"
-                            />
-                          )}
+                          <MemberAvatar
+                            image={chair.image}
+                            name={chair.name}
+                            sizeClass="w-24 h-24 text-2xl"
+                          />
                           <h4 className="text-lg font-bold text-gray-900 mb-1">
                             {chair.name}
                           </h4>
@@ -367,15 +398,11 @@ export default function TabContent({ tabId }: TabContentProps) {
                           key={index}
                           className="bg-purple-50/60 rounded-2xl p-6 border border-purple-100 shadow-sm text-center"
                         >
-                          {chair.image && (
-                            <Image
-                              width={90}
-                              height={90}
-                              src={chair.image}
-                              alt={chair.name}
-                              className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-2 border-purple-200 shadow-xs"
-                            />
-                          )}
+                          <MemberAvatar
+                            image={chair.image}
+                            name={chair.name}
+                            sizeClass="w-24 h-24 text-2xl"
+                          />
                           <h4 className="text-lg font-bold text-gray-900 mb-1">
                             {chair.name}
                           </h4>
@@ -410,15 +437,11 @@ export default function TabContent({ tabId }: TabContentProps) {
                           key={index}
                           className="bg-emerald-50/60 rounded-2xl p-6 border border-emerald-100 shadow-sm text-center max-w-md w-full mx-auto"
                         >
-                          {chair.image && (
-                            <Image
-                              width={90}
-                              height={90}
-                              src={chair.image}
-                              alt={chair.name}
-                              className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-2 border-emerald-200 shadow-xs"
-                            />
-                          )}
+                          <MemberAvatar
+                            image={chair.image}
+                            name={chair.name}
+                            sizeClass="w-24 h-24 text-2xl"
+                          />
                           <h4 className="text-lg font-bold text-gray-900 mb-1">
                             {chair.name}
                           </h4>
@@ -436,10 +459,95 @@ export default function TabContent({ tabId }: TabContentProps) {
         </div>
       );
 
+    case "technical-pub":
+    case "publication":
+      return (
+        <div>
+          <div className="text-center mb-8">
+            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Award className="w-8 h-8 text-blue-600" />
+            </div>
+            <h3 className="text-2xl font-display font-bold text-gray-900 mb-2">
+              Technical & Publication Chairs
+            </h3>
+            <p className="text-gray-600">
+              Technical program oversight, review management, and proceedings publication
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {[...technicalProgramCoChairs, ...publicationChairs].map(
+              (chair: CommitteeMember, index: number) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow text-center flex flex-col items-center justify-between"
+                >
+                  <div>
+                    <MemberAvatar
+                      image={chair.image}
+                      name={chair.name}
+                      sizeClass="w-24 h-24 text-2xl"
+                      borderClass="border-2 border-blue-100 shadow-xs"
+                    />
+                    <h4 className="text-lg font-bold text-gray-900 mb-2">
+                      {chair.name}
+                    </h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {chair.title}
+                    </p>
+                  </div>
+                </div>
+              )
+            )}
+          </div>
+        </div>
+      );
+
+    case "finance":
+      return (
+        <div>
+          <div className="text-center mb-8">
+            <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Briefcase className="w-8 h-8 text-emerald-600" />
+            </div>
+            <h3 className="text-2xl font-display font-bold text-gray-900 mb-2">
+              {financeChairs.length > 1 ? "Finance Chairs" : "Finance Chair"}
+            </h3>
+            <p className="text-gray-600">
+              Financial management and budget oversight
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            {financeChairs.map((chair: CommitteeMember, index: number) => (
+              <div
+                key={index}
+                className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow text-center flex flex-col items-center justify-between"
+              >
+                <div>
+                  <MemberAvatar
+                    image={chair.image}
+                    name={chair.name}
+                    sizeClass="w-24 h-24 text-2xl"
+                    borderClass="border-2 border-emerald-100 shadow-xs"
+                  />
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">
+                    {chair.name}
+                  </h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {chair.title}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+
     case "others":
       return (
         <div className="space-y-16">
-          {/* Technical and Publication Chair */}
+          {/* Fallback tab content for others if accessed */}
           {(technicalProgramCoChairs.length > 0 || publicationChairs.length > 0) && (
             <div>
               <div className="text-center mb-8">
@@ -447,7 +555,7 @@ export default function TabContent({ tabId }: TabContentProps) {
                   <Award className="w-8 h-8 text-blue-600" />
                 </div>
                 <h3 className="text-2xl font-display font-bold text-gray-900 mb-2">
-                  Technical and Publication Chair
+                  Technical & Publication Chairs
                 </h3>
                 <p className="text-gray-600">
                   Technical program oversight, review management, and proceedings publication
@@ -462,12 +570,11 @@ export default function TabContent({ tabId }: TabContentProps) {
                       className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow text-center flex flex-col items-center justify-between"
                     >
                       <div>
-                        <Image
-                          width={90}
-                          height={90}
-                          src={chair.image || "/placeholder.svg"}
-                          alt={chair.name}
-                          className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-2 border-blue-100 shadow-xs"
+                        <MemberAvatar
+                          image={chair.image}
+                          name={chair.name}
+                          sizeClass="w-24 h-24 text-2xl"
+                          borderClass="border-2 border-blue-100 shadow-xs"
                         />
                         <h4 className="text-lg font-bold text-gray-900 mb-2">
                           {chair.name}
@@ -483,7 +590,6 @@ export default function TabContent({ tabId }: TabContentProps) {
             </div>
           )}
 
-          {/* Finance Chair */}
           {financeChairs.length > 0 && (
             <div>
               <div className="text-center mb-8">
@@ -505,12 +611,11 @@ export default function TabContent({ tabId }: TabContentProps) {
                     className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow text-center flex flex-col items-center justify-between"
                   >
                     <div>
-                      <Image
-                        width={90}
-                        height={90}
-                        src={chair.image || "/placeholder.svg"}
-                        alt={chair.name}
-                        className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-2 border-emerald-100 shadow-xs"
+                      <MemberAvatar
+                        image={chair.image}
+                        name={chair.name}
+                        sizeClass="w-24 h-24 text-2xl"
+                        borderClass="border-2 border-emerald-100 shadow-xs"
                       />
                       <h4 className="text-lg font-bold text-gray-900 mb-2">
                         {chair.name}
@@ -629,12 +734,10 @@ export default function TabContent({ tabId }: TabContentProps) {
                 key={index}
                 className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow text-center"
               >
-                <Image
-                  width={100}
-                  height={100}
-                  src={student.image || "/placeholder.svg"}
-                  alt={student.name}
-                  className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-4 border-gray-100"
+                <MemberAvatar
+                  image={student.image}
+                  name={student.name}
+                  sizeClass="w-24 h-24 text-2xl"
                 />
                 <h4 className="text-lg font-bold text-gray-900 ">
                   {student.name}
