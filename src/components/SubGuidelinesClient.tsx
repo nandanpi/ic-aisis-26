@@ -36,10 +36,10 @@ export default function SubGuidelinesClient() {
     },
     {
       number: "3",
-      title: "Plagiarism Policy",
+      title: "Plagiarism & AI Detection Policy",
       icon: <AlertTriangle className="w-5 h-5" />,
       content:
-        "The similarity index (plagiarism) must be below 10%. Papers failing to meet this criterion will be rejected without review.",
+        "The similarity index (plagiarism) must be below 10% and AI detection should be less than 10%. Papers failing to meet these criteria will be rejected without review.",
       color: "red",
       highlight: true,
     },
@@ -87,8 +87,8 @@ export default function SubGuidelinesClient() {
   const reviewSteps = [
     {
       step: "1",
-      title: "Plagiarism Check",
-      description: "Similarity index must be below 10%",
+      title: "Plagiarism & AI Check",
+      description: "Similarity index & AI detection must be below 10%",
       icon: <Shield className="w-6 h-6" />,
     },
     {
@@ -290,8 +290,7 @@ export default function SubGuidelinesClient() {
                       <div className="mt-4 p-3 bg-red-50 rounded-lg border border-red-200">
                         <p className="text-red-700 text-xs font-medium">
                           <AlertTriangle className="w-4 h-4 inline mr-1" />
-                          Critical Requirement: Papers exceeding 10% similarity
-                          will be automatically rejected
+                          Critical Requirement: Papers exceeding 10% similarity or 10% AI detection will be automatically rejected
                         </p>
                       </div>
                     )}
@@ -410,7 +409,7 @@ export default function SubGuidelinesClient() {
                   Only accepted papers that are registered and presented at the
                   conference will be eligible for publication and certification.
                   All submitted manuscripts must have a similarity index
-                  (plagiarism) below 10% to proceed to the review stage.
+                  (plagiarism) below 10% and AI detection less than 10% to proceed to the review stage.
                 </p>
                 <div className="mt-4 p-4 bg-yellow-50 rounded-xl border border-yellow-200">
                   <p className="text-yellow-900 text-sm font-semibold">

@@ -304,7 +304,7 @@ export default function ReviewPolicy() {
                 <FileCheck className="w-6 h-6 text-green-600" />
               </div>
               <h2 className="text-2xl font-semibold text-gray-900">
-                Ethical Standards and Plagiarism Policy
+                Ethical Standards, Plagiarism & AI Policy
               </h2>
             </div>
             <div className="bg-green-50 rounded-xl p-6 border border-green-100">
@@ -317,7 +317,7 @@ export default function ReviewPolicy() {
                   <div className="w-2 h-2 rounded-full bg-green-400 mt-2 mr-3"></div>
                   <p className="text-gray-700">
                     All submissions will be subjected to{" "}
-                    <strong>plagiarism detection software</strong> (such as
+                    <strong>plagiarism and AI detection software</strong> (such as
                     Turnitin or iThenticate).
                   </p>
                 </li>
@@ -325,8 +325,8 @@ export default function ReviewPolicy() {
                   <div className="w-2 h-2 rounded-full bg-green-400 mt-2 mr-3"></div>
                   <p className="text-gray-700">
                     Papers with{" "}
-                    <strong>significant overlap (typically {">"} 10%)</strong>{" "}
-                    with previously published work will be rejected outright.
+                    <strong>significant overlap ({">"} 10%)</strong> or{" "}
+                    <strong>AI detection score exceeding 10%</strong> will be rejected outright.
                   </p>
                 </li>
                 <li className="flex items-start">
