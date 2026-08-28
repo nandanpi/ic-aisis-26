@@ -93,10 +93,9 @@ export default function Proceedings2026() {
                   The papers presented at IC-AISIS 2026, conducted under the <strong className="text-gray-900 font-semibold">ACT Conference banner</strong>, have been successfully published by our publishing partner, <strong className="text-gray-900 font-semibold">Hinweis Publisher</strong>, in <strong className="text-blue-700 font-semibold">Grenze International Journal</strong> as part of the official conference proceedings.
                 </p>
 
-                <div className="bg-blue-50/70 p-4 rounded-xl border border-blue-100 text-sm text-gray-700 leading-relaxed">
-                  <span className="font-semibold text-blue-950 block mb-1">Publication Classification Note:</span>
-                  Your paper was accepted and published as part of the <strong>IC-AISIS Conference</strong>, conducted under the <strong>ACT Conference banner</strong>, and was subsequently published by Hinweis Publisher in <strong>Grenze International Journal</strong> as part of the conference proceedings. Therefore, it should be considered a <strong>conference publication (conference proceedings paper)</strong> rather than a regular journal article.
-                </div>
+                <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                  Your paper was accepted and published as part of the <strong>IC-AISIS Conference</strong> (under the <strong>ACT Conference banner</strong>) in <strong>Grenze International Journal</strong> as part of the conference proceedings. Therefore, it should be considered a <strong>conference publication (conference proceedings paper)</strong> rather than a regular journal article.
+                </p>
 
                 {/* Call to Action Button */}
                 <div className="pt-2">
