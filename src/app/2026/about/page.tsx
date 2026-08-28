@@ -35,7 +35,7 @@ const AboutContent = () => {
 
   const handleTabChange = (tabId: string) => {
     setActiveTab(tabId);
-    router.push(`/about?tab=${tabId}`, { scroll: false });
+    router.push(`/2026/about?tab=${tabId}`, { scroll: false });
   };
   return (
     <div className="pt-16">

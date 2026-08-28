@@ -24,7 +24,7 @@ export default function Committees() {
 
   const handleTabChange = (tabId: string) => {
     setActiveTab(tabId);
-    router.push(`/committee?tab=${tabId}`);
+    router.push(`/2026/committee?tab=${tabId}`);
   };
 
   const tabs = [
