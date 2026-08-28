@@ -8,6 +8,7 @@ import {
   Sparkles,
   FileCheck,
   FileSpreadsheet,
+  Info,
 } from "lucide-react";
 
 export default function Proceedings2026() {
@@ -129,6 +130,19 @@ export default function Proceedings2026() {
                 </div>
               </div>
 
+            </div>
+          </div>
+
+          {/* Publication Classification Note */}
+          <div className="bg-blue-50/70 border border-blue-200/80 rounded-2xl p-6 shadow-sm">
+            <div className="flex items-start space-x-3.5">
+              <Info className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+              <div className="space-y-1 text-sm md:text-base text-gray-700 leading-relaxed">
+                <h4 className="font-semibold text-blue-950 text-base">Publication Classification Note</h4>
+                <p>
+                  Your paper was accepted and published as part of the <strong>IC-AISIS Conference</strong>, conducted under the <strong>ACT Conference banner</strong>, and was subsequently published by Hinweis Publisher in <strong>Grenze International Journal</strong> as part of the conference proceedings. Therefore, it should be considered a <strong>conference publication (conference proceedings paper)</strong> rather than a regular journal article.
+                </p>
+              </div>
             </div>
           </div>
 
