@@ -167,7 +167,7 @@ export default function Proceedings2026() {
               <div className="flex-shrink-0 bg-white p-6 rounded-2xl border border-emerald-200 shadow-sm text-center min-w-[220px] w-full lg:w-auto">
                 <FileCheck className="w-10 h-10 text-emerald-600 mx-auto mb-2" />
                 <p className="text-xs text-gray-500 font-medium uppercase tracking-wider">Indexing Status</p>
-                <p className="text-xl font-bold text-emerald-700 mt-1">100% Scopus Indexed</p>
+                <p className="text-xl font-bold text-emerald-700 mt-1">Scopus Indexed</p>
                 <span className="inline-block mt-2 px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-semibold rounded-full border border-emerald-200">
                   Verified &amp; Active
                 </span>
