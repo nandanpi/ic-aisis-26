@@ -8,7 +8,6 @@ import {
   Sparkles,
   FileCheck,
   FileSpreadsheet,
-  Info,
 } from "lucide-react";
 
 export default function Proceedings2026() {
@@ -91,8 +90,13 @@ export default function Proceedings2026() {
                 </h2>
 
                 <p className="text-gray-700 leading-relaxed text-base md:text-lg">
-                  Currently, the papers presented at IC-AISIS 2026 have been successfully published by our publishing partner, <strong className="text-gray-900 font-semibold">Hinweis Research</strong>, in the prestigious <strong className="text-blue-700 font-semibold">Grenze Publication</strong>.
+                  The papers presented at IC-AISIS 2026, conducted under the <strong className="text-gray-900 font-semibold">ACT Conference banner</strong>, have been successfully published by our publishing partner, <strong className="text-gray-900 font-semibold">Hinweis Publisher</strong>, in <strong className="text-blue-700 font-semibold">Grenze International Journal</strong> as part of the official conference proceedings.
                 </p>
+
+                <div className="bg-blue-50/70 p-4 rounded-xl border border-blue-100 text-sm text-gray-700 leading-relaxed">
+                  <span className="font-semibold text-blue-950 block mb-1">Publication Classification Note:</span>
+                  Your paper was accepted and published as part of the <strong>IC-AISIS Conference</strong>, conducted under the <strong>ACT Conference banner</strong>, and was subsequently published by Hinweis Publisher in <strong>Grenze International Journal</strong> as part of the conference proceedings. Therefore, it should be considered a <strong>conference publication (conference proceedings paper)</strong> rather than a regular journal article.
+                </div>
 
                 {/* Call to Action Button */}
                 <div className="pt-2">
@@ -125,24 +129,11 @@ export default function Proceedings2026() {
                     />
                   </div>
                   <p className="text-sm font-semibold text-gray-800">
-                    Hinweis Research
+                    Hinweis Publisher
                   </p>
                 </div>
               </div>
 
-            </div>
-          </div>
-
-          {/* Publication Classification Note */}
-          <div className="bg-blue-50/70 border border-blue-200/80 rounded-2xl p-6 shadow-sm">
-            <div className="flex items-start space-x-3.5">
-              <Info className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-              <div className="space-y-1 text-sm md:text-base text-gray-700 leading-relaxed">
-                <h4 className="font-semibold text-blue-950 text-base">Publication Classification Note</h4>
-                <p>
-                  Your paper was accepted and published as part of the <strong>IC-AISIS Conference</strong>, conducted under the <strong>ACT Conference banner</strong>, and was subsequently published by Hinweis Publisher in <strong>Grenze International Journal</strong> as part of the conference proceedings. Therefore, it should be considered a <strong>conference publication (conference proceedings paper)</strong> rather than a regular journal article.
-                </p>
-              </div>
             </div>
           </div>
 
