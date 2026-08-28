@@ -5,7 +5,6 @@ import {
   BookOpen,
   ExternalLink,
   CheckCircle2,
-  Clock,
   Sparkles,
   FileCheck,
   FileSpreadsheet,
