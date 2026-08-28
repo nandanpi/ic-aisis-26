@@ -202,19 +202,19 @@ const Navbar = () => {
                 <div className="flex items-center space-x-3 whitespace-nowrap">
                   
                   <span className="font-semibold text-blue-50 text-xs md:text-sm tracking-wide">
-                    IC-AISIS 2026 Proceedings are now published in <strong className="text-yellow-300">Grenze Publication</strong>! Scopus Indexing expected end of November.
+                    🎉 IC-AISIS 2026 Proceedings are published &amp; fully indexed in <strong className="text-yellow-300">Scopus</strong>! Check Scopus Indexed Paper IDs.
                   </span>
                   <span className="bg-blue-600/80 group-hover:bg-blue-500 text-white px-3 py-0.5 rounded-md text-xs font-semibold shadow transition-all duration-200 inline-flex items-center ml-2 border border-blue-400/30">
-                    View 2026 Proceedings &rarr;
+                    View Scopus Indexed IDs &rarr;
                   </span>
                 </div>
                 <div className="flex items-center space-x-3 whitespace-nowrap">
                  
                   <span className="font-semibold text-blue-50 text-xs md:text-sm tracking-wide">
-                    IC-AISIS 2026 Proceedings are now published in <strong className="text-yellow-300">Grenze Publication</strong>! Scopus Indexing expected end of November.
+                    🎉 IC-AISIS 2026 Proceedings are published &amp; fully indexed in <strong className="text-yellow-300">Scopus</strong>! Check Scopus Indexed Paper IDs.
                   </span>
                   <span className="bg-blue-600/80 group-hover:bg-blue-500 text-white px-3 py-0.5 rounded-md text-xs font-semibold shadow transition-all duration-200 inline-flex items-center ml-2 border border-blue-400/30">
-                    View 2026 Proceedings &rarr;
+                    View Scopus Indexed IDs &rarr;
                   </span>
                 </div>
               </motion.div>

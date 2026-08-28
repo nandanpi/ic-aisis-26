@@ -8,6 +8,7 @@ import {
   Clock,
   Sparkles,
   FileCheck,
+  FileSpreadsheet,
 } from "lucide-react";
 
 export default function Proceedings2026() {
@@ -132,29 +133,45 @@ export default function Proceedings2026() {
             </div>
           </div>
 
-          {/* Indexing Status Card */}
-          <div className="bg-gradient-to-br from-amber-50/80 via-orange-50/40 to-yellow-50/50 rounded-3xl p-8 md:p-10 border border-amber-200/80 shadow-md">
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          {/* Indexing Status Card - Scopus Indexed */}
+          <div className="bg-gradient-to-br from-emerald-50/90 via-teal-50/50 to-green-50/60 rounded-3xl p-8 md:p-10 border border-emerald-200/80 shadow-md relative overflow-hidden">
+            <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
               
-              <div className="space-y-3 max-w-2xl">
-                <div className="inline-flex items-center px-3 py-1 bg-amber-100 text-amber-800 text-xs font-bold uppercase tracking-wider rounded-full">
-                  <Clock className="w-3.5 h-3.5 mr-1.5 text-amber-700" />
-                  Indexing Status Update
+              <div className="space-y-4 max-w-2xl">
+                <div className="inline-flex items-center px-3.5 py-1 bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider rounded-full border border-emerald-300/60 shadow-sm">
+                  <CheckCircle2 className="w-4 h-4 mr-1.5 text-emerald-600" />
+                  Scopus Indexing Complete
                 </div>
                 
-                <h3 className="text-xl md:text-2xl font-display font-bold text-gray-900">
-                  Scopus Indexing Applied
+                <h3 className="text-2xl md:text-3xl font-display font-bold text-gray-900">
+                  All Papers are Now Indexed in Scopus
                 </h3>
 
-                <p className="text-gray-700 leading-relaxed text-base">
-                  Scopus Indexing has been formally applied for the published volume. The proceedings are currently under evaluation/processing and are expected to be fully indexed on <strong className="text-gray-900">Scopus around the end of November</strong>.
+                <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+                  We are pleased to announce that all accepted and published papers for IC-AISIS 2026 have been successfully indexed in <strong className="text-emerald-800 font-semibold">Scopus</strong>. You can view and verify the full list of papers along with their indexed Scopus IDs in the official spreadsheet below.
                 </p>
+
+                <div className="pt-2">
+                  <a
+                    href="https://docs.google.com/spreadsheets/d/1gvY1l4WdybLLvZARtP1X5F8Zp31Ad7L0/edit?usp=sharing&ouid=118121981205328594627&rtpof=true&sd=true"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center px-6 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 group"
+                  >
+                    <FileSpreadsheet className="w-5 h-5 mr-2.5 text-emerald-100" />
+                    <span>View Scopus Indexed Paper List &amp; IDs</span>
+                    <ExternalLink className="w-4 h-4 ml-2 opacity-80 group-hover:translate-x-0.5 transition-transform" />
+                  </a>
+                </div>
               </div>
 
-              <div className="flex-shrink-0 bg-white p-5 rounded-2xl border border-amber-200/60 shadow-sm text-center min-w-[200px]">
-                <FileCheck className="w-8 h-8 text-amber-600 mx-auto mb-2" />
-                <p className="text-xs text-gray-500 font-medium uppercase tracking-wider">Expected Scopus Indexing</p>
-                <p className="text-lg font-bold text-amber-700 mt-0.5">End of November</p>
+              <div className="flex-shrink-0 bg-white p-6 rounded-2xl border border-emerald-200 shadow-sm text-center min-w-[220px] w-full lg:w-auto">
+                <FileCheck className="w-10 h-10 text-emerald-600 mx-auto mb-2" />
+                <p className="text-xs text-gray-500 font-medium uppercase tracking-wider">Indexing Status</p>
+                <p className="text-xl font-bold text-emerald-700 mt-1">100% Scopus Indexed</p>
+                <span className="inline-block mt-2 px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-semibold rounded-full border border-emerald-200">
+                  Verified &amp; Active
+                </span>
               </div>
 
             </div>
