@@ -72,7 +72,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-white">
-                    {is2026 ? "January 24, 2026" : <>July 2<sup>nd</sup> and 3<sup>rd</sup>, 2027</>}
+                    {is2026 ? "January 24, 2026" : <>March 8<sup>th</sup> and 9<sup>th</sup>, 2027</>}
                   </p>
                   <p className="text-sm text-gray-400">
                     {is2026

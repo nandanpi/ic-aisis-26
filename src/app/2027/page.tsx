@@ -44,7 +44,7 @@ export default function Home() {
                 <div className="lg:col-span-7 text-white">
                   <div className="inline-flex items-center px-4 py-1.5 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-xs font-medium mb-3 border border-white/20">
                     <Calendar className="w-3.5 h-3.5 mr-2" />
-                    July 2<sup>nd</sup> and 3<sup>rd</sup>, 2027 • Offline Mode
+                    March 8<sup>th</sup> and 9<sup>th</sup>, 2027 • Offline Mode
                   </div>
 
                   <h1 className="text-3xl lg:text-5xl font-display font-bold mb-4 leading-tight">
@@ -109,7 +109,7 @@ export default function Home() {
                         <div className="flex items-center text-gray-700 text-sm">
                           <Clock className="w-4 h-4 mr-3 text-blue-600 flex-shrink-0" />
                           <div>
-                            <p className="font-medium">July 2<sup>nd</sup> and 3<sup>rd</sup>, 2027</p>
+                            <p className="font-medium">March 8<sup>th</sup> and 9<sup>th</sup>, 2027</p>
                             <p className="text-xs text-gray-500">
                               Two day conference
                             </p>

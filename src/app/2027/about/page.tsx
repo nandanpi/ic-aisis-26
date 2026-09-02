@@ -118,7 +118,7 @@ const AboutContent = () => {
                           (AI) in the domain of sustainability.
                         </p>
                         <p className="text-gray-700 leading-relaxed">
-                          Scheduled for <u>July 2<sup>nd</sup> and 3<sup>rd</sup>, 2027</u>, at NMAM Institute of
+                          Scheduled for <u>March 8<sup>th</sup> and 9<sup>th</sup>, 2027</u>, at NMAM Institute of
                           Technology, Nitte, this event (in-person +
                           virtual) will gather academicians, researchers,
                           industry professionals, policymakers, and students to

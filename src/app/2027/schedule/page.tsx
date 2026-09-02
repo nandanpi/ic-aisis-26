@@ -47,7 +47,7 @@ export default function Schedule() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-sm font-medium mb-8 border border-white/20">
               <Calendar className="w-4 h-4 mr-2" />
-              July 2<sup>nd</sup> and 3<sup>rd</sup>, 2027 • 2 Days • Offline Mode
+              March 8<sup>th</sup> and 9<sup>th</sup>, 2027 • 2 Days • Offline Mode
             </div>
 
             <h1 className="text-4xl lg:text-5xl font-display font-bold text-white mb-6">

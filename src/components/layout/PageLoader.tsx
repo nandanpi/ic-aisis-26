@@ -171,7 +171,7 @@ const PageLoader = ({ onComplete }: PageLoaderProps) => {
               </h3>
               <div className="flex items-center justify-center space-x-2 text-blue-100">
                 <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                <span className="text-sm">{is2026 ? "January 24, 2026" : "July 2–3, 2027"}</span>
+                <span className="text-sm">{is2026 ? "January 24, 2026" : "March 8–9, 2027"}</span>
                 <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
                 <span className="text-sm">NMAMIT, Nitte</span>
                 <span className="w-2 h-2 bg-blue-400 rounded-full"></span>

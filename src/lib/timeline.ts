@@ -148,7 +148,7 @@ export const timelineEvents2027: TimelineEvent[] = [
     color: "blue",
   },
   {
-    date: "02–03 July 2027",
+    date: "08–09 March 2027",
     title: "Conference Dates",
     description: "Two-day international conference (IC-AISIS 2027)",
     iconName: "Award",
@@ -208,7 +208,7 @@ export const importantDates2027: ImportantDate[] = [
     event: "Registration Deadline",
   },
   {
-    date: "02–03 July 2027",
+    date: "08–09 March 2027",
     event: "Conference Dates",
   },
 ];
