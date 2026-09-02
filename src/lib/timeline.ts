@@ -100,7 +100,7 @@ export const timelineEvents2027: TimelineEvent[] = [
     color: "orange",
   },
   {
-    date: "15 March 2027",
+    date: "05 February 2027",
     title: "Notification of Acceptance",
     description: "Authors will be notified about paper acceptance status",
     iconName: "CheckCircle",
@@ -108,7 +108,7 @@ export const timelineEvents2027: TimelineEvent[] = [
     color: "purple",
   },
   {
-    date: "10 April 2027",
+    date: "20 February 2027",
     title: "Camera-Ready Paper Submission",
     description: "Deadline for submitting final camera-ready manuscripts",
     iconName: "FileText",
@@ -116,7 +116,7 @@ export const timelineEvents2027: TimelineEvent[] = [
     color: "blue",
   },
   {
-    date: "20 April 2027",
+    date: "20 February 2027",
     title: "Author Registration Deadline",
     description: "Deadline for presenting authors to register for the conference",
     iconName: "Users",
@@ -124,7 +124,7 @@ export const timelineEvents2027: TimelineEvent[] = [
     color: "orange",
   },
   {
-    date: "20 April 2027",
+    date: "20 February 2027",
     title: "Early Bird Registration Ends",
     description: "Deadline for early bird conference registration discount",
     iconName: "Users",
@@ -132,7 +132,7 @@ export const timelineEvents2027: TimelineEvent[] = [
     color: "green",
   },
   {
-    date: "15 May 2027",
+    date: "25 February 2027",
     title: "Presentation Schedule Announcement",
     description: "Release of the presentation schedules for accepted papers",
     iconName: "Clock",
@@ -140,7 +140,7 @@ export const timelineEvents2027: TimelineEvent[] = [
     color: "purple",
   },
   {
-    date: "01 June 2027",
+    date: "01 March 2027",
     title: "Final Conference Program Release",
     description: "Detailed program schedule announcement",
     iconName: "FileText",
@@ -200,11 +200,11 @@ export const importantDates2027: ImportantDate[] = [
     event: "Paper Submission Deadline",
   },
   {
-    date: "15 March 2027",
+    date: "05 February 2027",
     event: "Notification of Acceptance",
   },
   {
-    date: "20 April 2027",
+    date: "20 February 2027",
     event: "Registration Deadline",
   },
   {
