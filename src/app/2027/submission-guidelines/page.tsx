@@ -329,13 +329,16 @@ export default function SubmissionGuidelines() {
               submission, authors will receive a confirmation, and the
               manuscript will be evaluated by the Technical Program Committee.
             </p>
-            <button
-              className="bg-gray-300 text-gray-600 px-8 py-4 rounded-xl font-semibold cursor-not-allowed inline-flex items-center shadow-none"
-              disabled
+            <a
+              href="https://cmt3.research.microsoft.com/ICAISIS2027"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <ExternalLink className="w-5 h-5 mr-2" />
-              Submit Paper (Coming Soon)
-            </button>
+              <div className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-colors inline-flex items-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all">
+                <ExternalLink className="w-5 h-5 mr-2" />
+                Submit Paper
+              </div>
+            </a>
           </div>
         </div>
       </section>

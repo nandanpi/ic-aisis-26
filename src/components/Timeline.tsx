@@ -202,33 +202,31 @@ const Timeline = () => {
                       {event.status === "upcoming" &&
                         event.title.includes("Paper Submission Deadline") && (
                           <div className="mt-4 pt-4 border-t border-gray-200">
-                            {is2026 ? (
-                              <a
-                                href={
-                                  "https://cmt3.research.microsoft.com/icaisis2025/Track/1/Submission/Create"
-                                }
-                                className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200"
+                            <a
+                              href={
+                                is2026
+                                  ? "https://cmt3.research.microsoft.com/icaisis2025/Track/1/Submission/Create"
+                                  : "https://cmt3.research.microsoft.com/ICAISIS2027"
+                              }
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200"
+                            >
+                              Submit Paper
+                              <svg
+                                className="w-4 h-4 ml-2"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
                               >
-                                Submit Paper
-                                <svg
-                                  className="w-4 h-4 ml-2"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M9 5l7 7-7 7"
-                                  />
-                                </svg>
-                              </a>
-                            ) : (
-                              <span className="text-gray-400 text-sm font-medium cursor-not-allowed">
-                                Submission Link (Coming Soon)
-                              </span>
-                            )}
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M9 5l7 7-7 7"
+                                />
+                              </svg>
+                            </a>
                           </div>
                         )}
                     </div>

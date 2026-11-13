@@ -66,12 +66,15 @@ export default function Home() {
                       <Download className="w-4 h-4 mr-2" />
                       Download Brochure (Coming Soon)
                     </button>
-                    <button
-                      className="border-2 border-white/80 text-white px-6 py-3 w-full rounded-xl font-semibold cursor-not-allowed inline-flex items-center justify-center backdrop-blur-sm disabled:opacity-60" disabled
+                    <a
+                      href="https://cmt3.research.microsoft.com/ICAISIS2027"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="border-2 border-white text-white px-6 py-3 w-full rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 inline-flex items-center justify-center backdrop-blur-sm"
                     >
                       <Notebook className="w-4 h-4 mr-2" />
-                      Submit Paper (Coming Soon)
-                    </button>
+                      Submit Paper
+                    </a>
                   </div>
 
                   <div className="mt-2">
@@ -147,11 +150,14 @@ export default function Home() {
                           >
                             Research Topics
                           </a>
-                          <span
-                            className="bg-gray-50 text-gray-400 p-2 rounded-lg border border-gray-100 font-medium opacity-60 cursor-not-allowed"
+                          <a
+                            href="https://cmt3.research.microsoft.com/ICAISIS2027"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-gray-50 hover:bg-blue-50 text-gray-700 hover:text-blue-700 p-2 rounded-lg transition-colors border border-gray-100 font-medium"
                           >
-                            Submit Paper (Soon)
-                          </span>
+                            Submit Paper
+                          </a>
                         </div>
                       </div>
                     </div>
