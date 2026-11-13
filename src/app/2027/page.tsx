@@ -118,9 +118,9 @@ export default function Home() {
                         <div className="flex items-center text-gray-700 text-sm">
                           <Award className="w-4 h-4 mr-3 text-blue-600 flex-shrink-0" />
                           <div>
-                            <p className="font-medium">Publishing Partner: Coming Soon</p>
+                            <p className="font-medium">Hinweis Research (Scopus-indexed)</p>
                             <p className="text-xs text-gray-500">
-                              Scopus Indexed (Details will be updated)
+                              Publication opportunity
                             </p>
                           </div>
                         </div>
@@ -221,7 +221,7 @@ export default function Home() {
               {
                 title: "Publication Opportunities",
                 description:
-                  <span>Get your research published with <u>(Coming Soon)</u> (Scopus Indexed)</span>,
+                  "Get your research published with Hinweis Research (Scopus-indexed)",
                 icon: "📚",
               },
               {

@@ -179,7 +179,7 @@ const AboutContent = () => {
                           {
                             icon: <Award className="w-6 h-6 text-blue-600" />,
                             title: "Publication Opportunities",
-                            desc: <span>Get your research published with <u>(Coming Soon)</u> (Scopus Indexed)</span>,
+                            desc: "Get your research published with Hinweis Research (Scopus-indexed)",
                           },
                         ].map((item, index) => (
                           <div
@@ -212,7 +212,7 @@ const AboutContent = () => {
                         leadership.
                       </p>
                       <p>
-                        Through publication opportunities with <u>(Coming Soon)</u> (Scopus Indexed)
+                        Through publication opportunities with Hinweis Research (Scopus-indexed)
                         and active knowledge exchange,
                         IC-AISIS&apos;27 aspires to make a meaningful
                         contribution to global efforts in sustainable

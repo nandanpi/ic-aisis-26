@@ -91,14 +91,14 @@ export const timelineEvents2027: TimelineEvent[] = [
     status: "upcoming",
     color: "red",
   },
-  {
-    date: "31 January 2027",
-    title: "Extended Submission Deadline (if applicable)",
-    description: "Extended deadline for late submissions of research papers",
-    iconName: "Clock",
-    status: "upcoming",
-    color: "orange",
-  },
+  // {
+  //   date: "31 January 2027",
+  //   title: "Extended Submission Deadline (if applicable)",
+  //   description: "Extended deadline for late submissions of research papers",
+  //   iconName: "Clock",
+  //   status: "upcoming",
+  //   color: "orange",
+  // },
   {
     date: "05 February 2027",
     title: "Notification of Acceptance",
