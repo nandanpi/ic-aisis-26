@@ -2,7 +2,7 @@
 
 import { useSearchParams, useRouter } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
-import { Crown, UserCheck, Award, Briefcase, Globe, GraduationCap } from "lucide-react";
+import { Crown, UserCheck, Globe, GraduationCap } from "lucide-react";
 import dynamic from "next/dynamic";
 
 const TabInterface = dynamic(() => import("@/components/TabInterface"), {
@@ -39,18 +39,6 @@ export default function Committees() {
       label: "General Chairs",
       icon: <UserCheck className="w-4 h-4" />,
       content: <TabContent tabId="chairs" />,
-    },
-    {
-      id: "publication",
-      label: "Publication Chairs",
-      icon: <Award className="w-4 h-4" />,
-      content: <TabContent tabId="publication" />,
-    },
-    {
-      id: "finance",
-      label: "Finance Chairs",
-      icon: <Briefcase className="w-4 h-4" />,
-      content: <TabContent tabId="finance" />,
     },
     {
       id: "technical",

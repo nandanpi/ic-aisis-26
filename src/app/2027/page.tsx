@@ -44,7 +44,7 @@ export default function Home() {
                 <div className="lg:col-span-7 text-white">
                   <div className="inline-flex items-center px-4 py-1.5 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-xs font-medium mb-3 border border-white/20">
                     <Calendar className="w-3.5 h-3.5 mr-2" />
-                    March 8<sup>th</sup> and 9<sup>th</sup>, 2027 • Offline Mode
+                    March 8<sup>th</sup> and 9<sup>th</sup>, 2027 • Hybrid Mode
                   </div>
 
                   <h1 className="text-3xl lg:text-5xl font-display font-bold mb-4 leading-tight">
@@ -114,7 +114,7 @@ export default function Home() {
                           <div>
                             <p className="font-medium">March 8<sup>th</sup> and 9<sup>th</sup>, 2027</p>
                             <p className="text-xs text-gray-500">
-                              Two day conference
+                              Two day conference • Hybrid Mode
                             </p>
                           </div>
                         </div>
@@ -231,8 +231,8 @@ export default function Home() {
                 icon: "📚",
               },
               {
-                title: "Offline Participation",
-                description: "In-person and virtual presentation and participation options",
+                title: "Hybrid Participation",
+                description: "Hybrid Mode (Online mode is only for participants outside Karnataka)",
                 icon: "🌐",
               },
               {

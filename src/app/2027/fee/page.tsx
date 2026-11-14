@@ -6,6 +6,7 @@ import {
   AlertCircle,
   X,
   Calendar,
+  Globe,
 } from "lucide-react";
 import { useState } from "react";
 import { importantDates2027 } from "@/lib/timeline";
@@ -14,13 +15,23 @@ export default function RegistrationFees() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const feeCategories = [
     {
-      category: "Registration Fee",
+      category: "Indian Participants",
       icon: <GraduationCap className="w-6 h-6" />,
       color: "blue",
       description:
-        "Standard registration fee for all presenting authors and participants",
+        "For authors, researchers, faculty, students, and delegates from India",
       fees: {
         amount: "₹8,000",
+      },
+    },
+    {
+      category: "International Participants",
+      icon: <Globe className="w-6 h-6" />,
+      color: "green",
+      description:
+        "For international authors, researchers, students, and delegates",
+      fees: {
+        amount: "$80",
       },
     },
   ];
@@ -63,7 +74,7 @@ export default function RegistrationFees() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-sm font-medium mb-8 border border-white/20">
               <CreditCard className="w-4 h-4 mr-2" />
-              Registration Opening Soon
+              Hybrid Mode Conference • Registration Opening Soon
             </div>
 
             <h1 className="text-4xl lg:text-5xl font-display font-bold text-white mb-6">
@@ -73,12 +84,10 @@ export default function RegistrationFees() {
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
               Register and secure your spot at IC-AISIS 2027.
             </p>
-            {// Early bird rates available until 15 January 2027.
-            }
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 inline-block">
               <p className="text-blue-100 text-sm">
                 <AlertCircle className="w-4 h-4 inline mr-2" />
-                Final registration fees as approved by the organizing committee
+                Flat registration fee: ₹8,000 (Indian Participants) | $80 (International Participants)
               </p>
             </div>
           </div>
@@ -97,14 +106,14 @@ export default function RegistrationFees() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {feeCategories.map((category, index) => {
               const colors =
                 colorClasses2[category.color as keyof typeof colorClasses2];
               return (
                 <div
                   key={index}
-                  className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 w-full max-w-md"
+                  className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 w-full"
                 >
                   <div
                     className={`bg-gradient-to-r h-32 ${colors.gradient} p-6`}
@@ -134,7 +143,7 @@ export default function RegistrationFees() {
                         <span className="text-sm font-medium text-gray-700">
                           Registration Fee
                         </span>
-                        <span className="text-xl font-bold text-blue-700">
+                        <span className="text-2xl font-bold text-blue-700">
                           {category.fees.amount}
                         </span>
                       </div>
@@ -143,6 +152,23 @@ export default function RegistrationFees() {
                 </div>
               );
             })}
+          </div>
+
+          {/* Hybrid Mode Notice */}
+          <div className="mt-10 max-w-4xl mx-auto p-6 bg-gradient-to-r from-blue-50 via-indigo-50 to-blue-50 rounded-2xl border border-blue-200 shadow-sm">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center flex-shrink-0 mt-0.5 shadow-md">
+                <Globe className="w-6 h-6" />
+              </div>
+              <div className="space-y-1">
+                <h4 className="text-lg font-bold text-gray-900">
+                  Conference Mode: Hybrid (In-Person &amp; Online)
+                </h4>
+                <p className="text-gray-700 leading-relaxed text-sm">
+                  IC-AISIS 2027 is conducted in <strong>Hybrid Mode</strong>. Please note that the <strong>Online presentation mode is available exclusively for participants from outside Karnataka</strong>. Authors and participants residing or affiliated within Karnataka are required to attend and present in-person (offline) at NMAM Institute of Technology, Nitte.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -208,11 +234,13 @@ export default function RegistrationFees() {
 
               <div className="p-6 bg-blue-50 rounded-xl border border-blue-100">
                 <h3 className="text-lg font-semibold text-blue-900 mb-3">
-                  Attendance
+                  Attendance &amp; Presentation
                 </h3>
                 <p className="text-gray-700">
-                  Upon acceptance, the student author is required to attend the
-                  conference in person and present their research.
+                  Upon acceptance, authors are required to present their
+                  research. Offline (in-person) presentation is mandatory for
+                  participants from Karnataka; online presentation is available
+                  exclusively for participants outside Karnataka.
                 </p>
               </div>
 
@@ -248,7 +276,7 @@ export default function RegistrationFees() {
               Important Registration Dates
             </h2>
             <p className="text-xl text-gray-600">
-              Mark your calendar and register early to save on fees
+              Key registration milestones and deadlines
             </p>
           </div>
 
@@ -295,6 +323,15 @@ export default function RegistrationFees() {
                   </h4>
                   <ul className="text-sm text-yellow-700 space-y-1">
                     <li>
+                      • Mode: <strong>Hybrid</strong> — Online presentation is available exclusively for participants outside Karnataka
+                    </li>
+                    <li>
+                      • Participants from Karnataka must present in-person at NMAM Institute of Technology, Nitte
+                    </li>
+                    <li>
+                      • Registration fee: <strong>₹8,000</strong> for Indian authors/participants and <strong>$80</strong> for International authors/participants
+                    </li>
+                    <li>
                       • Registration fees are non-refundable after payment
                       confirmation
                     </li>
@@ -303,7 +340,7 @@ export default function RegistrationFees() {
                       verification
                     </li>
                     <li>
-                      • Author registration is mandatory for paper presentation
+                      • Author registration is mandatory for paper presentation and proceedings publication
                     </li>
                     <li>
                       • Registration form will be available soon on our website
@@ -380,10 +417,8 @@ export default function RegistrationFees() {
                 and be officially listed as the <strong>first author</strong>.
               </li>
               <li>
-                Upon acceptance of the paper, the student author is required to{" "}
-                <strong>attend the conference in person</strong> and present
-                their research. This in-person participation is essential to
-                ensure academic exchange and visibility of student work.
+                Upon acceptance of the paper, the author is required to{" "}
+                <strong>present their research</strong>. Presentation must be in-person for participants within Karnataka; online presentation mode is available exclusively for participants from outside Karnataka.
               </li>
               <li>
                 Proof of student status (such as a valid student ID or an

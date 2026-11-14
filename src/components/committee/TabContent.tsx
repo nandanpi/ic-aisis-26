@@ -276,18 +276,24 @@ export default function TabContent({ tabId }: TabContentProps) {
                 <Users className="w-8 h-8 text-orange-600" />
               </div>
               <h3 className="text-2xl font-display font-bold text-gray-900 mb-2">
-                General Chair
+                {generalChairs.length > 1 ? "General Chairs" : "General Chair"}
               </h3>
               <p className="text-gray-600">
                 Conference leadership and overall direction
               </p>
             </div>
 
-            <div className="flex justify-center">
+            <div
+              className={
+                generalChairs.length > 1
+                  ? "grid grid-cols-1 md:grid-cols-3 gap-8"
+                  : "flex justify-center"
+              }
+            >
               {generalChairs.map((chair: CommitteeMember, index: number) => (
                 <div
                   key={index}
-                  className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow text-center max-w-xl w-full"
+                  className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow text-center w-full"
                 >
                   <MemberAvatar
                     image={chair.image}

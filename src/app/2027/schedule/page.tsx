@@ -47,7 +47,7 @@ export default function Schedule() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-sm font-medium mb-8 border border-white/20">
               <Calendar className="w-4 h-4 mr-2" />
-              March 8<sup>th</sup> and 9<sup>th</sup>, 2027 • 2 Days • Offline Mode
+              March 8<sup>th</sup> and 9<sup>th</sup>, 2027 • 2 Days • Hybrid Mode
             </div>
 
             <h1 className="text-4xl lg:text-5xl font-display font-bold text-white mb-6">
@@ -82,9 +82,7 @@ export default function Schedule() {
                 Venue Information
               </h3>
               <p className="text-gray-600 text-sm">
-                NMAM Institute of Technology, Nitte, Karnataka, India. All
-                sessions will be held in the main conference complex with offline
-                participation options.
+                NMAM Institute of Technology, Nitte, Karnataka, India. The conference is conducted in hybrid mode; online presentation is available exclusively for participants from outside Karnataka.
               </p>
             </div>
 

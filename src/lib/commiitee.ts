@@ -48,15 +48,6 @@ const honoraryChairs = [
 
 const generalChairs = [
   {
-    name: "Dr. Niranjan N Chiplunkar",
-    title: "Principal, NMAM Institute of Technology, Nitte",
-    image:
-      "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665152/niranjan_Large_snbysb.jpg",
-  },
-];
-
-const generalCoChairs = [
-  {
     name: "Dr. Shashank Shetty",
     title: "Associate Professor, Department of CSE, NMAMIT, Nitte",
     image:
@@ -74,52 +65,14 @@ const generalCoChairs = [
     image: "https://nitte.edu.in/admin/photo/3/faculty/6/2811.jpg",
   },
 ];
+
+const generalCoChairs: { name: string; title: string; image?: string }[] = [];
  
 const technicalProgramCoChairs: { name: string; title: string; image?: string }[] = [];
 
-const publicationChairs = [
-  {
-    name: "Dr. Parameshachari B. D.",
-    title:
-      "Professor & Head, Dept. of ECE, Nitte Meenakshi Institute of Technology, Bengaluru",
-    image: "https://nitte.edu.in/nmit/admin/photo/7/faculty/17/518.jpg",
-  },
-  {
-    name: "Dr. Vasudev Acharya",
-    title: "Professor, Dept. of ISE, NMAMIT, Nitte",
-    image: "https://nitte.edu.in/admin/photo/3/faculty/8/2268.jpg",
-  },
-  {
-    name: "Dr. Veeresh Gonal",
-    title:
-      "Associate Professor, Dept. of E & E Engineering, BLDEACET, Vijayapur",
-  },
-  {
-    name: "Dr. Shashidhar R.",
-    title:
-      "Associate Professor, Dept. of E & C Engineering, JSS Science and Technology University",
-  },
-  {
-    name: "Prabhavathi P",
-    title:
-      "Associate Professor, Dept. of Electronics & Communication, BNM Institute of Technology",
-  },
-];
+const publicationChairs: { name: string; title: string; image?: string }[] = [];
 
-const financeChairs = [
-  {
-    name: "Dr. Shashank Shetty",
-    title: "Associate Professor, Department of CSE, NMAMIT, Nitte",
-    image:
-      "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665153/shashankShetty_Large_rurgwa.jpg",
-  },
-  {
-    name: "Dr. Vijeesh V",
-    title: "Associate Director R&D, Nitte Off Campus Centre",
-    image:
-      "https://res.cloudinary.com/dqtyllykk/image/upload/v1748665153/vijeesh_Large_yfwxij.jpg",
-  },
-];
+const financeChairs: { name: string; title: string; image?: string }[] = [];
 
 const executiveCommittee = [
   {

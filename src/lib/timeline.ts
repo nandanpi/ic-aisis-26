@@ -123,14 +123,14 @@ export const timelineEvents2027: TimelineEvent[] = [
     status: "upcoming",
     color: "orange",
   },
-  {
-    date: "20 February 2027",
-    title: "Early Bird Registration Ends",
-    description: "Deadline for early bird conference registration discount",
-    iconName: "Users",
-    status: "upcoming",
-    color: "green",
-  },
+  // {
+  //   date: "20 February 2027",
+  //   title: "Early Bird Registration Ends",
+  //   description: "Deadline for early bird conference registration discount",
+  //   iconName: "Users",
+  //   status: "upcoming",
+  //   color: "green",
+  // },
   {
     date: "25 February 2027",
     title: "Presentation Schedule Announcement",
@@ -150,7 +150,7 @@ export const timelineEvents2027: TimelineEvent[] = [
   {
     date: "08–09 March 2027",
     title: "Conference Dates",
-    description: "Two-day international conference (IC-AISIS 2027)",
+    description: "Two-day international conference (IC-AISIS 2027) in Hybrid Mode",
     iconName: "Award",
     status: "upcoming",
     color: "red",
@@ -209,6 +209,6 @@ export const importantDates2027: ImportantDate[] = [
   },
   {
     date: "08–09 March 2027",
-    event: "Conference Dates",
+    event: "Conference Dates (Hybrid Mode)",
   },
 ];
