@@ -417,7 +417,7 @@ export default function SubmissionGuidelines() {
                 </h4>
                 <p className="text-blue-700 text-sm leading-relaxed">
                   Only accepted papers that are registered and presented at the
-                  conference (conducted in hybrid mode: in-person for participants within Karnataka, and online for participants outside Karnataka) will be eligible for publication and certification.
+                  conference (conducted in Hybrid Mode: virtual mode only for participants outside Karnataka, and in-person for participants within Karnataka) will be eligible for publication and certification.
                   All submitted manuscripts must have a similarity index
                   (plagiarism) below 10% to proceed to the review stage.
                 </p>

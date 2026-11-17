@@ -150,7 +150,7 @@ export const timelineEvents2027: TimelineEvent[] = [
   {
     date: "08–09 March 2027",
     title: "Conference Dates",
-    description: "Two-day international conference (IC-AISIS 2027) in Hybrid Mode",
+    description: "Two-day international conference (IC-AISIS 2027) in Hybrid Mode (Virtual mode only for participants outside Karnataka)",
     iconName: "Award",
     status: "upcoming",
     color: "red",
@@ -209,6 +209,6 @@ export const importantDates2027: ImportantDate[] = [
   },
   {
     date: "08–09 March 2027",
-    event: "Conference Dates (Hybrid Mode)",
+    event: "Conference Dates (Hybrid Mode - Virtual mode only for participants outside Karnataka)",
   },
 ];

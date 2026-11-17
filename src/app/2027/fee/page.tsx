@@ -74,7 +74,7 @@ export default function RegistrationFees() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-sm font-medium mb-8 border border-white/20">
               <CreditCard className="w-4 h-4 mr-2" />
-              Hybrid Mode Conference • Registration Opening Soon
+              Hybrid Mode (Virtual mode only for participants outside Karnataka) • Registration Opening Soon
             </div>
 
             <h1 className="text-4xl lg:text-5xl font-display font-bold text-white mb-6">
@@ -162,10 +162,10 @@ export default function RegistrationFees() {
               </div>
               <div className="space-y-1">
                 <h4 className="text-lg font-bold text-gray-900">
-                  Conference Mode: Hybrid (In-Person &amp; Online)
+                  Conference Mode: Hybrid Mode (Virtual mode only for participants outside Karnataka)
                 </h4>
                 <p className="text-gray-700 leading-relaxed text-sm">
-                  IC-AISIS 2027 is conducted in <strong>Hybrid Mode</strong>. Please note that the <strong>Online presentation mode is available exclusively for participants from outside Karnataka</strong>. Authors and participants residing or affiliated within Karnataka are required to attend and present in-person (offline) at NMAM Institute of Technology, Nitte.
+                  IC-AISIS 2027 is conducted in <strong>Hybrid Mode</strong>. Please note that <strong>Virtual mode is only for participants outside Karnataka</strong>. All authors and participants from Karnataka are required to attend and present in-person at NMAM Institute of Technology, Nitte.
                 </p>
               </div>
             </div>
@@ -323,7 +323,7 @@ export default function RegistrationFees() {
                   </h4>
                   <ul className="text-sm text-yellow-700 space-y-1">
                     <li>
-                      • Mode: <strong>Hybrid</strong> — Online presentation is available exclusively for participants outside Karnataka
+                      • Mode: <strong>Hybrid Mode</strong> — Virtual mode is only for participants outside Karnataka (in-person for Karnataka participants)
                     </li>
                     <li>
                       • Participants from Karnataka must present in-person at NMAM Institute of Technology, Nitte

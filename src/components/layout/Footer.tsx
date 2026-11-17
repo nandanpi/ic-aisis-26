@@ -75,7 +75,7 @@ const Footer = () => {
                     {is2026 ? "January 24, 2026" : <>March 8<sup>th</sup> and 9<sup>th</sup>, 2027</>}
                   </p>
                   <p className="text-sm text-gray-400">
-                    Hybrid Mode Conference (Online mode is only for participants outside Karnataka)
+                    Hybrid Mode Conference (Virtual mode only for participants outside Karnataka)
                   </p>
                 </div>
               </div>

@@ -240,7 +240,7 @@ export default function Home() {
               },
               {
                 title: "Hybrid Participation",
-                description: "(Virtual Mode is Only for the participants Outsite Karnataka)",
+                description: "(Virtual Mode is Only for the participants Outside Karnataka)",
                 icon: "🌐",
               },
               {

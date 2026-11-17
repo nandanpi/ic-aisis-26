@@ -119,7 +119,7 @@ const AboutContent = () => {
                         </p>
                         <p className="text-gray-700 leading-relaxed">
                           Scheduled for <u>March 8<sup>th</sup> and 9<sup>th</sup>, 2027</u>, at NMAM Institute of
-                          Technology, Nitte, this conference will be conducted in <strong>hybrid mode</strong> (online presentation is available exclusively for participants outside Karnataka). It will gather academicians, researchers,
+                          Technology, Nitte, this conference will be conducted in <strong>hybrid mode</strong> (virtual mode only for participants outside Karnataka). It will gather academicians, researchers,
                           industry professionals, policymakers, and students to
                           address sustainability challenges through AI-driven
                           intelligent systems.

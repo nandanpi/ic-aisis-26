@@ -221,11 +221,6 @@ const executiveCommittee = [
 
 const technicalCommittee = [
   {
-    name: "Dr. Venugopal P S",
-    title:
-      "HoD, Dept. of Artificial Intelligence & Data Science Engineering, NMAMIT, Nitte",
-  },
-  {
     name: "SATOFUKA Yoshifumi（里深 好文）",
     title:
       "Professor & Dean, Department of Civil and Environmental Engineering, Faculty of Science and Engineering, Ritsumeikan University, Japan",
