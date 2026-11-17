@@ -62,10 +62,12 @@ export default function Home() {
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-3 mb-6">
-                    <button className="bg-white text-blue-600 px-6 py-3 w-full rounded-xl font-semibold cursor-not-allowed inline-flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-85" disabled>
-                      <Download className="w-4 h-4 mr-2" />
-                      Download Brochure (Coming Soon)
-                    </button>
+                    <a href="/2027/brochure.pdf" download className="w-full">
+                      <button className="bg-white text-blue-600 px-6 py-3 w-full rounded-xl font-semibold hover:bg-blue-50 transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 cursor-pointer">
+                        <Download className="w-4 h-4 mr-2" />
+                        Download Brochure
+                      </button>
+                    </a>
                     <a
                       href="https://cmt3.research.microsoft.com/ICAISIS2027"
                       target="_blank"
