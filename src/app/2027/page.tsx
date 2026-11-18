@@ -42,9 +42,14 @@ export default function Home() {
             <div className="max-w-5xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div className="lg:col-span-7 text-white">
-                  <div className="inline-flex items-center px-4 py-1.5 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-xs font-medium mb-3 border border-white/20">
-                    <Calendar className="w-3.5 h-3.5 mr-2" />
-                    March 8<sup>th</sup> and 9<sup>th</sup>, 2027 • Hybrid Mode (Virtual mode only for participants outside Karnataka)
+                  <div className="inline-flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-2 mb-3">
+                    <div className="inline-flex items-center px-4 py-1.5 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-xs font-medium border border-white/20 w-fit">
+                      <Calendar className="w-3.5 h-3.5 mr-2 flex-shrink-0" />
+                      <span>March 8–9, 2027 • Hybrid Mode</span>
+                    </div>
+                    <span className="text-[11px] sm:text-xs text-blue-200 font-medium px-1 sm:px-0">
+                      (Virtual mode only for participants outside Karnataka)
+                    </span>
                   </div>
 
                   <h1 className="text-3xl lg:text-5xl font-display font-bold mb-4 leading-tight">
@@ -111,12 +116,15 @@ export default function Home() {
                             </p>
                           </div>
                         </div>
-                        <div className="flex items-center text-gray-700 text-sm">
-                          <Clock className="w-4 h-4 mr-3 text-blue-600 flex-shrink-0" />
+                        <div className="flex items-start text-gray-700 text-sm">
+                          <Clock className="w-4 h-4 mr-3 text-blue-600 flex-shrink-0 mt-0.5" />
                           <div>
-                            <p className="font-medium">March 8<sup>th</sup> and 9<sup>th</sup>, 2027</p>
+                            <p className="font-medium">March 8–9, 2027</p>
                             <p className="text-xs text-gray-500">
-                              Two day conference • Hybrid Mode (Virtual mode only for participants outside Karnataka)
+                              Two day conference • Hybrid Mode
+                            </p>
+                            <p className="text-[11px] text-blue-600 font-medium leading-tight mt-0.5">
+                              (Virtual mode only for participants outside Karnataka)
                             </p>
                           </div>
                         </div>

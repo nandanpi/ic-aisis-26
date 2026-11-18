@@ -45,9 +45,14 @@ export default function Schedule() {
 
         <div className="relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-sm font-medium mb-8 border border-white/20">
-              <Calendar className="w-4 h-4 mr-2" />
-              March 8<sup>th</sup> and 9<sup>th</sup>, 2027 • 2 Days • Hybrid Mode (Virtual mode only for participants outside Karnataka)
+            <div className="inline-flex flex-col sm:flex-row sm:items-center justify-center gap-2 mb-8">
+              <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-blue-100 text-sm font-medium border border-white/20 w-fit mx-auto sm:mx-0">
+                <Calendar className="w-4 h-4 mr-2 flex-shrink-0" />
+                <span>March 8–9, 2027 • 2 Days • Hybrid Mode</span>
+              </div>
+              <span className="text-xs sm:text-sm text-blue-200 font-medium">
+                (Virtual mode only for participants outside Karnataka)
+              </span>
             </div>
 
             <h1 className="text-4xl lg:text-5xl font-display font-bold text-white mb-6">
